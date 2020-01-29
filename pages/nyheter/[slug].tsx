@@ -1,30 +1,32 @@
-import matter from "gray-matter";
+import React from "react";
 import ReactMarkdown from "react-markdown";
 
-const BlogTemplate = props => {
-  // data from getInitialProps
-  const markdownBody = props.content;
-  const frontmatter = props.data;
+import { parseArticle, ArticleFile } from "../../utils/parseArticle";
+import { NotFoundError } from "../../errors/NotFound";
+
+interface Props {
+  article: ArticleFile;
+}
+
+const BlogTemplate = ({ article }: Props) => {
   return (
     <article>
-      <h1>{frontmatter.title}</h1>
+      <h1>{article.data.title}</h1>
       <div>
-        <ReactMarkdown source={markdownBody} />
+        <ReactMarkdown source={article.content} />
       </div>
     </article>
   );
 };
 
 BlogTemplate.getInitialProps = async context => {
-  // context contains the query param
   const { slug } = context.query;
-  console.log(slug);
-  // grab the file in the posts dir based on the slug
-  const content = await import(`../../articles/${slug}.md`);
-  //gray-matter parses the yaml frontmatter from the md body
-  const data = matter(content.default);
+  const article = await parseArticle(slug);
+  if (article === null) {
+    throw new NotFoundError(slug);
+  }
   return {
-    ...data
+    article
   };
 };
 
