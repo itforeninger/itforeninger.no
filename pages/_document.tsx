@@ -8,7 +8,6 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import { ComponentProps } from "react";
-import { ColorStyleSheet } from "../stylesheets/colors";
 
 const getInitialProps = async (
   ctx: DocumentContext
@@ -57,7 +56,6 @@ const CustomDocument = (_: DocumentProps): JSX.Element => {
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <body>
-        <ColorStyleSheet />
         <Main />
         <NextScript />
       </body>
