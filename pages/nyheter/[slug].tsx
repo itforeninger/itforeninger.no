@@ -3,15 +3,21 @@ import ReactMarkdown from "react-markdown";
 
 import { parseArticle, ArticleFile } from "../../utils/parseArticle";
 import { NotFoundError } from "../../errors/NotFound";
+import styled from "styled-components";
+import { colors } from "../../stylesheets/colors";
 
 interface Props {
   article: ArticleFile;
 }
 
+const Header = styled.h1`
+  color: ${colors.darkGreen};
+`;
+
 const BlogTemplate = ({ article }: Props) => {
   return (
     <article>
-      <h1>{article.data.title}</h1>
+      <Header>{article.data.title}</Header>
       <div>
         <ReactMarkdown source={article.content} />
       </div>
