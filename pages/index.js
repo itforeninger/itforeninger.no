@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import RowWrapper from '../components/RowWrapper';
+import Header from '../components/Header';
+import Paragraph from '../components/Paragraph';
+import Link from '../components/Link';
 
 
 const Grid = styled.div`
@@ -13,16 +16,28 @@ const Grid = styled.div`
 
 const Home = () => (
   <Grid>
-    <RowWrapper start={2} end={5} >
-      <h2>FIF er</h2>
-      <p>Et forum hvor de største studentforeningene for IT-studenter i Norge er representert. Formålet vårt er å samle og forbedre foreningene, og tilbudene de gir til studentene. Dette gjør vi gjennom kontinuerlig kontakt og faste møter hvor erfaringsutveksling står i fokus</p>
+    <RowWrapper start={2} end={7} >
+      <Header color="orange">FIF er</Header>
+      <Paragraph>Et forum hvor de største studentforeningene for IT-studenter i Norge er representert. Formålet vårt er å samle og forbedre foreningene, og tilbudene de gir til studentene. Dette gjør vi gjennom kontinuerlig kontakt og faste møter hvor erfaringsutveksling står i fokus</Paragraph>
     </RowWrapper>
-    <RowWrapper start={5} end={8} >
-      <h2>Bli med i FIF</h2>
-      <p>Er din studentforening interessert i å bli med i FIF? Vi vil gjerne høre fra deg! Ta kontakt med oss</p>
+    <RowWrapper start={5} end={10} >
+      <Header color="pink">Bli med i FIF</Header>
+      <Paragraph>Er din studentforening interessert i å bli med i FIF? Vi vil gjerne høre fra deg! Ta kontakt med oss</Paragraph>
     </RowWrapper>
     <RowWrapper start={1} end={12} backgroundColor="beige">
-      Test wrapper 2
+      <Header color="lightBlue">
+        Studentforeningene i FIF
+      </Header>
+      <Link large href="online.ntnu.no" color="orange">Online</Link>
+      <Link large color="orange">Abakus</Link>
+      <Link large color="orange">TIHLDE</Link>
+      <Link large color="orange">Cybernistisk Selskab</Link>
+      <Link large color="orange">Navet</Link>
+      <Link large color="orange">Beta</Link>
+      <Link large color="orange">Epsilon</Link>
+      <Link large color="orange">Echo</Link>
+      <Link large color="orange">Tromsøstudentenes Dataforening</Link>
+      <Link large color="orange">Login</Link>
     </RowWrapper>
   </Grid>
 )
