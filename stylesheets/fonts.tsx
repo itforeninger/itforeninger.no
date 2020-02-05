@@ -11,6 +11,7 @@ export const FontStyleSheet = createGlobalStyle`
 
   body {
     /* Fonts */
+    margin: 0;
     font-family: 'Fira Mono', monospace;
   }
 
