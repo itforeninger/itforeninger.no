@@ -16,6 +16,28 @@ const StickyBar = styled.div`
   width: 100%;
 `;
 
+const Arrow = styled.a`
+  display: block;
+  padding-left: 0.5em;
+  padding-top: 0.1em;
+  text-decoration: none;
+  color: white;
+  font-size: 3em;
+  letter-spacing: -0.5em;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: letter-spacing 1s ease;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  :hover {
+    letter-spacing: 0.1em;
+  }
+`;
+
 const FixedText = styled.div`
   font-size: 4em;
   color: white;
@@ -39,7 +61,8 @@ const Sidebar = () => {
   return (
     <Container>
       <StickyBar>
-        <div>{"<-"}</div>
+        {/* A joke, but a good one. We'll let it stay */}
+        <Arrow href="/">{"<---------"}</Arrow>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>
     </Container>
