@@ -4,6 +4,7 @@ import { AppProps } from "next/app";
 import { ColorStyleSheet } from "../stylesheets/colors";
 import { FontStyleSheet } from "../stylesheets/fonts";
 import { AnimatePresence } from "framer-motion";
+import { LogoContainer } from "../components/Logo/LogoContainer";
 
 type Props = AppProps;
 
@@ -19,6 +20,7 @@ const CustomApp = (appProps: Props): JSX.Element => {
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
+      <LogoContainer />
     </>
   );
 };
