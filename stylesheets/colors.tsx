@@ -16,15 +16,23 @@ export const ColorStyleSheet = createGlobalStyle`
     --black: #050505;
     --lightBlue: #ACCAFC;
     --offBlack: #191F29;
+    --white: #FFFFFF;
+    --lightBlack: #282923;
+    --darkGray: #40403A;
+    --dullGreen: #ADC398;
 
     /* Color uses */
     --backgroundColor: var(--white);
     --backgroundColor2: var(--beige);
+    --paragraphColor: var(--black);
+    --accentColor1: var(--orange);
 
     /* Dark mode overrides */
     @media (prefers-color-scheme: dark) {
-      --backgroundColor: var(--black);
-      --backgroundColor2: var(--offBlack);
+      --backgroundColor: var(--lightBlack);
+      --backgroundColor2: var(--darkGray);
+      --paragraphColor: var(--beige);
+      --accentColor1: var(--dullGreen);
     }
   }
 `;
@@ -38,5 +46,13 @@ export const colors = {
   orange: "var(--orange)",
   black: "var(--black)",
   lightBlue: "var(--lightBlue)",
-  offBlack: "var(--offBlack)"
+  offBlack: "var(--offBlack)",
+  white: "var(--white)",
+  lightBlack: "var(--lightBlack)",
+  darkGray: "var(--darkGray)",
+  dullGreen: "var(--dullGreen)",
+  backgroundColor: "var(--backgroundColor)",
+  backgroundColor2: "var(--backgroundColor2)",
+  paragraphColor: "var(--paragraphColor)",
+  accentColor1: "var(--accentColor1)"
 };
