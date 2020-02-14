@@ -5,6 +5,7 @@ import { parseArticle, ArticleFile } from "../../utils/parseArticle";
 import { NotFoundError } from "../../errors/NotFound";
 import styled from "styled-components";
 import { colors } from "../../stylesheets/colors";
+import { motion } from "framer-motion";
 
 interface Props {
   article: ArticleFile;
@@ -16,12 +17,27 @@ const Header = styled.h1`
 
 const BlogTemplate = ({ article }: Props) => {
   return (
-    <article>
-      <Header>{article.data.title}</Header>
-      <div>
-        <ReactMarkdown source={article.content} />
-      </div>
-    </article>
+    <motion.div
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{
+        x: "100vw",
+        opacity: 0
+      }}
+      transition={{
+        type: "tween",
+        ease: "anticipate",
+        duration: 0.5
+      }}
+    >
+      <article>
+        <Header>{article.data.title}</Header>
+        <div>
+          <ReactMarkdown source={article.content} />
+        </div>
+        <a href="/nyheter">tilbake</a>
+      </article>
+    </motion.div>
   );
 };
 
