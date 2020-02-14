@@ -17,10 +17,10 @@ const CustomApp = (appProps: Props): JSX.Element => {
       </Head>
       <ColorStyleSheet />
       <FontStyleSheet />
-      <LogoContainer />
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
+      <LogoContainer />
     </>
   );
 };
