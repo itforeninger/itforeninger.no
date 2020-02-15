@@ -55,7 +55,7 @@ const BlogTemplate = ({ article }: Props) => {
       </Article>
       <TopLeft>
         <Link href="/nyheter">
-          <FunkyArrow color={colors.lightBlue}>{"<------"}</FunkyArrow>
+          <FunkyArrow color={colors.lightBlue} />
         </Link>
       </TopLeft>
     </motion.div>

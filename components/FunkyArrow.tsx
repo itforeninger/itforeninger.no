@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
-const FunkyArrow = styled.a`
+interface FunkyArrowProps {
+  color: string;
+}
+
+const StyledArrow = styled.a`
   display: block;
+  min-width: 1.1em;
   padding-left: 40px;
   padding-top: 20px;
   text-decoration: none;
@@ -21,5 +26,10 @@ const FunkyArrow = styled.a`
     letter-spacing: 0.2em;
   }
 `;
+
+// A joke, but a good one. We'll let it stay
+const FunkyArrow: React.FC<FunkyArrowProps> = ({ color }) => (
+  <StyledArrow color={color}>{"<------"}</StyledArrow>
+);
 
 export default FunkyArrow;
