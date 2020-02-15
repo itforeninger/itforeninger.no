@@ -40,6 +40,7 @@ const Arrow = styled.a`
 
 const FixedText = styled.div`
   font-size: 4em;
+  text-transform: uppercase;
   color: white;
   position: absolute;
   bottom: 4em;

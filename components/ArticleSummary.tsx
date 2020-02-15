@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colors } from "../stylesheets/colors";
 import Link from "./Link";
 import ReactMarkdown from "react-markdown";
-import Paragraph from "./Paragraph";
+import ArticleDate from "./ArticleDate";
 
 interface ArticleSummaryInterface {
   href: string;
@@ -16,7 +16,7 @@ const dateFormatter = new Intl.DateTimeFormat("nb-NO");
 
 const ArticleWrapper = styled.article`
   max-width: 30em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 `;
 
 const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
@@ -27,12 +27,12 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
 }) => {
   return (
     <ArticleWrapper>
-      <Link href={href} color={colors.pink}>
+      <Link large href={href} color={colors.pink}>
         {title}
       </Link>
-      <Paragraph>
+      <ArticleDate>
         {"Sist oppdatert: " + dateFormatter.format(new Date(date))}
-      </Paragraph>
+      </ArticleDate>
       <ReactMarkdown>{content}</ReactMarkdown>
     </ArticleWrapper>
   );
