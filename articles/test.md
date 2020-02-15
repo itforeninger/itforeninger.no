@@ -1,5 +1,5 @@
 ---
-title: "The coastal red giants"
+title: Hva er det som skjer
 author: Watson & Crick
 date: 2019-07-10
 ---
