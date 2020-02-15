@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import React from "react";
 
 interface FunkyArrowProps {
   color: string;
+  href?: string;
+  onClick?: () => void;
 }
 
 const StyledArrow = styled.a`
@@ -27,9 +30,14 @@ const StyledArrow = styled.a`
   }
 `;
 
-// A joke, but a good one. We'll let it stay
-const FunkyArrow: React.FC<FunkyArrowProps> = ({ color }) => (
-  <StyledArrow color={color}>{"<------"}</StyledArrow>
-);
-
+const FunkyArrow: React.FC<FunkyArrowProps> = React.forwardRef<
+  HTMLAnchorElement,
+  Omit<FunkyArrowProps, "innerRef">
+>(({ color, href, onClick }, ref) => {
+  return (
+    <StyledArrow ref={ref} onClick={onClick} href={href} color={color}>
+      {"<------"}
+    </StyledArrow>
+  );
+});
 export default FunkyArrow;
