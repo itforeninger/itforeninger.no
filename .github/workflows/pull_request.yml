@@ -1,0 +1,22 @@
+name: Pull Request
+on: pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        working-directory: .
+        run: yarn
+
+      - name: Check format (prettier)
+        working-directory: .
+        run: yarn format-check
+
+      - name: Lint (eslint)
+        working-directory: .
+        run: yarn lint-check
+
+      - name: Compile
+        working-directory: .
+        run: yarn build
