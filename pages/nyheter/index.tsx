@@ -44,7 +44,7 @@ const Index = ({ articles }: Props) => {
             <ArticleSummary
               key={article.slug}
               date={article.data.date}
-              href={`/nyheter/${article.slug}`}
+              slug={article.slug}
               title={article.data.title}
               content={article.content}
             ></ArticleSummary>

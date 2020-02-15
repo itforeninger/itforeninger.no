@@ -7,7 +7,7 @@ import LinkText from "./LinkText";
 import Link from "next/link";
 
 interface ArticleSummaryInterface {
-  href: string;
+  slug: string;
   title: string;
   content: string;
   date: string;
@@ -22,14 +22,13 @@ const ArticleWrapper = styled.article`
 
 const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
   date,
-  href,
+  slug,
   title,
   content
 }) => {
-  console.log(href);
   return (
     <ArticleWrapper>
-      <Link href="/nyheter/[slug]" as={href}>
+      <Link href="/nyheter/[slug]" as={`/nyheter/${slug}`}>
         <LinkText large color={colors.pink}>
           {title}
         </LinkText>
