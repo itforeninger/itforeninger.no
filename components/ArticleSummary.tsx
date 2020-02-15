@@ -29,7 +29,7 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
   console.log(href);
   return (
     <ArticleWrapper>
-      <Link href={href} passHref>
+      <Link href="/nyheter/[slug]" as={href}>
         <LinkText large color={colors.pink}>
           {title}
         </LinkText>
