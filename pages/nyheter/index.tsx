@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   readArticlesDirectory,
   ArticleDocument,
@@ -6,8 +5,8 @@ import {
 import { motion } from 'framer-motion';
 import Sidebar from '../../components/Sidebar';
 import styled from 'styled-components';
-import { colors } from '../../stylesheets/colors';
 import ArticleSummary from '../../components/ArticleSummary';
+import React from 'react';
 
 interface Props {
   articles: ArticleDocument[];

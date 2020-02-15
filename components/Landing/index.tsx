@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../stylesheets/colors';
 import { LandingMain } from './LandingMain';

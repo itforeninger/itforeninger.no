@@ -1,3 +1,4 @@
+import React from 'react';
 import { colors } from '../../stylesheets/colors';
 import { FC } from 'react';
 

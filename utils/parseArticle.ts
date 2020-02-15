@@ -1,10 +1,10 @@
 import matter, { GrayMatterFile } from 'gray-matter';
 
 interface ArticleFileImport {
-  default: any;
+  default: matter.Input;
 }
 
-export interface ArticleFile extends GrayMatterFile<any> {
+export interface ArticleFile extends GrayMatterFile<Buffer> {
   data: {
     title: string;
     author: string;

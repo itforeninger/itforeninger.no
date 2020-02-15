@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { ABOUT_FIF } from '../../constants/paragraphs';
 import Header from '../Header';

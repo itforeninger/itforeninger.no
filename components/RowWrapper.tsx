@@ -1,4 +1,4 @@
-import styled, { css, StyledFunction } from 'styled-components';
+import styled from 'styled-components';
 import { colors } from '../stylesheets/colors';
 
 interface RowWrapperProps {
