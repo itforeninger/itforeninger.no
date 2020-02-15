@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { colors } from "../../stylesheets/colors";
 import { motion } from "framer-motion";
 import FunkyArrow from "../../components/FunkyArrow";
+import Link from "next/link";
 
 interface Props {
   article: ArticleFile;
@@ -53,9 +54,9 @@ const BlogTemplate = ({ article }: Props) => {
         </div>
       </Article>
       <TopLeft>
-        <FunkyArrow color={colors.lightBlue} href="/nyheter">
-          {"<------"}
-        </FunkyArrow>
+        <Link href="/nyheter">
+          <FunkyArrow color={colors.lightBlue}>{"<------"}</FunkyArrow>
+        </Link>
       </TopLeft>
     </motion.div>
   );

@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../stylesheets/colors";
-import Link from "./Link";
 import ReactMarkdown from "react-markdown";
 import ArticleDate from "./ArticleDate";
+import LinkText from "./LinkText";
+import Link from "next/link";
 
 interface ArticleSummaryInterface {
   href: string;
@@ -25,10 +26,13 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
   title,
   content
 }) => {
+  console.log(href);
   return (
     <ArticleWrapper>
-      <Link large href={href} color={colors.pink}>
-        {title}
+      <Link href={href} passHref>
+        <LinkText large color={colors.pink}>
+          {title}
+        </LinkText>
       </Link>
       <ArticleDate>
         {"Sist oppdatert: " + dateFormatter.format(new Date(date))}

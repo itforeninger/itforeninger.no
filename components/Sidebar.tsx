@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../stylesheets/colors";
 import FunkyArrow from "./FunkyArrow";
+import Link from "next/link";
 
 const Container = styled.div`
   height: 3000px;
@@ -42,9 +43,9 @@ const Sidebar = () => {
     <Container>
       <StickyBar>
         {/* A joke, but a good one. We'll let it stay */}
-        <FunkyArrow color={colors.white} href="/">
-          {"<------"}
-        </FunkyArrow>
+        <Link href="/" passHref>
+          <FunkyArrow color={colors.white}>{"<------"}</FunkyArrow>
+        </Link>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>
     </Container>
