@@ -23,7 +23,7 @@ export const AboutMembers = () => {
       <Header color={colors.lightBlue}>Studentforeningene i FIF</Header>
       {MEMBERS.map(member => (
         <p key={member.link}>
-          <Link href={"http://online.ntnu.no"} passHref>
+          <Link href={member.link} passHref>
             <MemberLink color={colors.accentColor1}>{member.name}</MemberLink>
           </Link>
         </p>
