@@ -6,6 +6,7 @@ import { NotFoundError } from "../../errors/NotFound";
 import styled from "styled-components";
 import { colors } from "../../stylesheets/colors";
 import { motion } from "framer-motion";
+import FunkyArrow from "../../components/FunkyArrow";
 
 interface Props {
   article: ArticleFile;
@@ -13,6 +14,21 @@ interface Props {
 
 const Header = styled.h1`
   color: ${colors.darkGreen};
+`;
+
+const Article = styled.article`
+  display: flex;
+  flex-direction: column;
+  max-width: 40em;
+  padding-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const TopLeft = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const BlogTemplate = ({ article }: Props) => {
@@ -30,13 +46,17 @@ const BlogTemplate = ({ article }: Props) => {
         duration: 0.5
       }}
     >
-      <article>
+      <Article>
         <Header>{article.data.title}</Header>
         <div>
           <ReactMarkdown source={article.content} />
         </div>
-        <a href="/nyheter">tilbake</a>
-      </article>
+      </Article>
+      <TopLeft>
+        <FunkyArrow color={colors.lightBlue} href="/nyheter">
+          {"<------"}
+        </FunkyArrow>
+      </TopLeft>
     </motion.div>
   );
 };
