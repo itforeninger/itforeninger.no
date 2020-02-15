@@ -4,7 +4,6 @@ import Header from "../Header";
 import Paragraph from "../Paragraph";
 import { colors } from "../../stylesheets/colors";
 import Link from "next/link";
-import FunkyArrow from "../FunkyArrow";
 
 const Grid = styled.div`
   margin: 100px 0;
