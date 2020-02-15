@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { ABOUT_FIF } from "../../constants/paragraphs";
-import Header from "../Header";
-import Paragraph from "../Paragraph";
-import { colors } from "../../stylesheets/colors";
+import styled from 'styled-components';
+import { ABOUT_FIF } from '../../constants/paragraphs';
+import Header from '../Header';
+import Paragraph from '../Paragraph';
+import { colors } from '../../stylesheets/colors';
 
 const Wrapper = styled.div`
   height: 100vh;

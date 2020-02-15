@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface LinkProps {
   large?: boolean;
@@ -6,15 +6,17 @@ interface LinkProps {
 
 const Link = styled.a<LinkProps>`
   text-decoration: underline;
-  color: ${props => props.color};
-  transition: filter .5s;
+  color: ${(props) => props.color};
+  transition: filter 0.5s;
 
-  ${props => props.large && css`
-    font-size: 1.5em;
-  `}
-  :hover {
+  ${(props) =>
+      props.large &&
+      css`
+        font-size: 1.5em;
+      `}
+    :hover {
     filter: brightness(80%);
   }
-`
+`;
 
 export default Link;

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { colors } from "../stylesheets/colors";
+import React from 'react';
+import styled from 'styled-components';
+import { colors } from '../stylesheets/colors';
 
 const Container = styled.div`
   height: 3000px;
@@ -62,7 +62,7 @@ const Sidebar = () => {
     <Container>
       <StickyBar>
         {/* A joke, but a good one. We'll let it stay */}
-        <Arrow href="/">{"<---------"}</Arrow>
+        <Arrow href="/">{'<---------'}</Arrow>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>
     </Container>

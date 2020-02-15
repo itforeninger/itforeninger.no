@@ -1,4 +1,4 @@
-import matter, { GrayMatterFile } from "gray-matter";
+import matter, { GrayMatterFile } from 'gray-matter';
 
 interface ArticleFileImport {
   default: any;

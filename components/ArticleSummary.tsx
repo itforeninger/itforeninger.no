@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { colors } from "../stylesheets/colors";
-import Link from "./Link";
-import ReactMarkdown from "react-markdown";
-import Paragraph from "./Paragraph";
+import React from 'react';
+import styled from 'styled-components';
+import { colors } from '../stylesheets/colors';
+import Link from './Link';
+import ReactMarkdown from 'react-markdown';
+import Paragraph from './Paragraph';
 
 interface ArticleSummaryInterface {
   href: string;
@@ -12,7 +12,7 @@ interface ArticleSummaryInterface {
   date: string;
 }
 
-const dateFormatter = new Intl.DateTimeFormat("nb-NO");
+const dateFormatter = new Intl.DateTimeFormat('nb-NO');
 
 const ArticleWrapper = styled.article`
   max-width: 30em;
@@ -23,7 +23,7 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
   date,
   href,
   title,
-  content
+  content,
 }) => {
   return (
     <ArticleWrapper>
@@ -31,7 +31,7 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
         {title}
       </Link>
       <Paragraph>
-        {"Sist oppdatert: " + dateFormatter.format(new Date(date))}
+        {'Sist oppdatert: ' + dateFormatter.format(new Date(date))}
       </Paragraph>
       <ReactMarkdown>{content}</ReactMarkdown>
     </ArticleWrapper>

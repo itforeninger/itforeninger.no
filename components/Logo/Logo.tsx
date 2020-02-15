@@ -1,5 +1,5 @@
-import { colors } from "../../stylesheets/colors";
-import { FC } from "react";
+import { colors } from '../../stylesheets/colors';
+import { FC } from 'react';
 
 interface Props {
   color?: string;
@@ -8,7 +8,7 @@ interface Props {
 
 export const Logo: FC<Props> = ({
   color = colors.darkGreen,
-  strokeWidth = "4px"
+  strokeWidth = '4px',
 }) => {
   return (
     <svg

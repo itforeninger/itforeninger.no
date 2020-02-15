@@ -1,4 +1,4 @@
-import matter, { GrayMatterFile } from "gray-matter";
+import matter, { GrayMatterFile } from 'gray-matter';
 
 interface ArticleFileImport {
   default: any;
@@ -21,15 +21,15 @@ export interface ArticleDocument extends ArticleFile {
 
 const createSlug = (fileName: string) => {
   return fileName
-    .replace(/^.*[\\\/]/, "")
-    .split(".")
+    .replace(/^.*[\\\/]/, '')
+    .split('.')
     .slice(0, -1)
-    .join(".");
+    .join('.');
 };
 
 export const readArticlesDirectory = async (): Promise<ArticleDocument[]> => {
   // Get all '.md' files from the articles directory as a require context.
-  const articleDirContext = require.context("../articles", true, /\.md$/);
+  const articleDirContext = require.context('../articles', true, /\.md$/);
   const fileNames = articleDirContext.keys();
   const files = fileNames.map<ArticleFileImport>(articleDirContext);
   const data = fileNames.map((fileName, index) => {
@@ -38,7 +38,7 @@ export const readArticlesDirectory = async (): Promise<ArticleDocument[]> => {
     const content = matter(file.default) as ArticleFile;
     return {
       ...content,
-      slug
+      slug,
     };
   });
   return data;
