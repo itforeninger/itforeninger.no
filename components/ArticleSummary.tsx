@@ -15,7 +15,7 @@ interface ArticleSummaryInterface {
 const dateFormatter = new Intl.DateTimeFormat("nb-NO");
 
 const ArticleWrapper = styled.article`
-  max-width: 30em;
+  max-width: 35em;
   margin-bottom: 3em;
 `;
 

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.34" height="58.561" viewBox="0 0 42.34 58.561">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #accafc;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Pil" transform="translate(1.88)">
+    <line id="Line_4" data-name="Line 4" class="cls-1" y2="51.408" transform="translate(19.186 0)"/>
+    <path id="Path_6" data-name="Path 6" class="cls-1" d="M908.314,3379.132l19.286,22.006,19.293-22.006" transform="translate(-908.315 -3346.369)"/>
+  </g>
+</svg>

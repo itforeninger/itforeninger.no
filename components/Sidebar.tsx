@@ -43,9 +43,9 @@ const FixedText = styled.div`
   text-transform: uppercase;
   color: white;
   position: absolute;
-  bottom: 4em;
-  left: 0.2em;
-  height: 2.5em;
+  bottom: 2.5em;
+  left: 0.5em;
+  width: 6em;
   -webkit-transform-origin: 0 50%;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
