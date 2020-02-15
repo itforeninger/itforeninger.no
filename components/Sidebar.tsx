@@ -34,7 +34,7 @@ const Arrow = styled.a`
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
   :hover {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
   }
 `;
 
@@ -62,7 +62,7 @@ const Sidebar = () => {
     <Container>
       <StickyBar>
         {/* A joke, but a good one. We'll let it stay */}
-        <Arrow href="/">{"<---------"}</Arrow>
+        <Arrow href="/">{"<------"}</Arrow>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>
     </Container>
