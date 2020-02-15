@@ -16,7 +16,7 @@ export const Info = () => {
       <Header color={colors.pink}>{JOIN_FIF.header}</Header>
       <Paragraph>
         {JOIN_FIF.content},{" "}
-        <Link href="mailto:exburn0@gmail.com">
+        <Link href={"mailto:" + JOIN_FIF.contact}>
           <a>{JOIN_FIF.contact}</a>
         </Link>
       </Paragraph>
