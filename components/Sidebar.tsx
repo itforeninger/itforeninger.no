@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../stylesheets/colors";
+import FunkyArrow from "./FunkyArrow";
+import Link from "next/link";
 
 const Container = styled.div`
   height: 3000px;
@@ -16,35 +18,14 @@ const StickyBar = styled.div`
   width: 100%;
 `;
 
-const Arrow = styled.a`
-  display: block;
-  padding-left: 0.5em;
-  padding-top: 0.1em;
-  text-decoration: none;
-  color: white;
-  font-size: 3em;
-  letter-spacing: -0.5em;
-  font-weight: bolder;
-  cursor: pointer;
-  transition: letter-spacing 1s ease;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
-  :hover {
-    letter-spacing: 0.1em;
-  }
-`;
-
 const FixedText = styled.div`
   font-size: 4em;
+  text-transform: uppercase;
   color: white;
   position: absolute;
-  bottom: 4em;
-  left: 0.2em;
-  height: 2.5em;
+  bottom: 2.5em;
+  left: 0.5em;
+  width: 6em;
   -webkit-transform-origin: 0 50%;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
@@ -61,8 +42,9 @@ const Sidebar = () => {
   return (
     <Container>
       <StickyBar>
-        {/* A joke, but a good one. We'll let it stay */}
-        <Arrow href="/">{"<---------"}</Arrow>
+        <Link href="/" passHref>
+          <FunkyArrow color={colors.white} />
+        </Link>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>
     </Container>

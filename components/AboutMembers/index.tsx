@@ -1,12 +1,12 @@
 import Header from "../Header";
-import Link from "../Link";
 import { colors } from "../../stylesheets/colors";
 import styled from "styled-components";
 import { MEMBERS } from "../../constants/about";
 import { BaseSection } from "../BaseSection";
+import LinkText from "../LinkText";
+import Link from "next/link";
 
-const MemberLink = styled(Link)`
-  color: ${colors.accentColor1};
+const MemberLink = styled(LinkText)`
   text-transform: uppercase;
 `;
 
@@ -23,7 +23,9 @@ export const AboutMembers = () => {
       <Header color={colors.lightBlue}>Studentforeningene i FIF</Header>
       {MEMBERS.map(member => (
         <p key={member.link}>
-          <MemberLink href={member.link}>{member.name}</MemberLink>
+          <Link href={member.link} passHref>
+            <MemberLink color={colors.accentColor1}>{member.name}</MemberLink>
+          </Link>
         </p>
       ))}
     </Section>

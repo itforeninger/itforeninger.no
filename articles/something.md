@@ -1,5 +1,5 @@
 ---
-title: Logo/nettside
+title: FIF er bra
 author: Ole Anders Stokker
 date: 2020-01-27
 ---

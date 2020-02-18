@@ -1,5 +1,5 @@
 ---
-title: "The coastal red giants"
+title: Første artikkel
 author: Watson & Crick
 date: 2019-07-10
 ---

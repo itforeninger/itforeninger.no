@@ -21,8 +21,8 @@ const Container = styled.div`
 const ArticleList = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 4em;
-  margin-top: 6em;
+  margin-left: 5em;
+  margin-top: 10em;
 `;
 
 const Index = ({ articles }: Props) => {
@@ -44,7 +44,7 @@ const Index = ({ articles }: Props) => {
             <ArticleSummary
               key={article.slug}
               date={article.data.date}
-              href={`/nyheter/${article.slug}`}
+              slug={article.slug}
               title={article.data.title}
               content={article.content}
             ></ArticleSummary>
