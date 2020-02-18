@@ -4,10 +4,10 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-  DocumentInitialProps
-} from "next/document";
-import { ServerStyleSheet } from "styled-components";
-import { ComponentProps } from "react";
+  DocumentInitialProps,
+} from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
+import React, { ComponentProps } from 'react';
 
 const getInitialProps = async (
   ctx: DocumentContext
@@ -18,7 +18,7 @@ const getInitialProps = async (
   try {
     ctx.renderPage = () => {
       return originalRenderPage({
-        enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
       });
     };
 
@@ -30,7 +30,7 @@ const getInitialProps = async (
           {initialProps.styles}
           {sheet.getStyleElement()}
         </>
-      )
+      ),
     };
   } finally {
     sheet.seal();
@@ -39,6 +39,7 @@ const getInitialProps = async (
 
 type DocumentProps = ComponentProps<typeof Document>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CustomDocument = (_: DocumentProps): JSX.Element => {
   return (
     <Html>

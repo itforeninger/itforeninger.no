@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 /**
  * Colors are defined as CSS variables for use to be able to change them in runtime.
@@ -39,20 +39,20 @@ export const ColorStyleSheet = createGlobalStyle`
 
 /* TypeScript color definitions */
 export const colors = {
-  darkGreen: "var(--darkGreen)",
-  lightGray: "var(--lightGray)",
-  beige: "var(--beige)",
-  pink: "var(--pink)",
-  orange: "var(--orange)",
-  black: "var(--black)",
-  lightBlue: "var(--lightBlue)",
-  offBlack: "var(--offBlack)",
-  white: "var(--white)",
-  lightBlack: "var(--lightBlack)",
-  darkGray: "var(--darkGray)",
-  dullGreen: "var(--dullGreen)",
-  backgroundColor: "var(--backgroundColor)",
-  backgroundColor2: "var(--backgroundColor2)",
-  paragraphColor: "var(--paragraphColor)",
-  accentColor1: "var(--accentColor1)"
+  darkGreen: 'var(--darkGreen)',
+  lightGray: 'var(--lightGray)',
+  beige: 'var(--beige)',
+  pink: 'var(--pink)',
+  orange: 'var(--orange)',
+  black: 'var(--black)',
+  lightBlue: 'var(--lightBlue)',
+  offBlack: 'var(--offBlack)',
+  white: 'var(--white)',
+  lightBlack: 'var(--lightBlack)',
+  darkGray: 'var(--darkGray)',
+  dullGreen: 'var(--dullGreen)',
+  backgroundColor: 'var(--backgroundColor)',
+  backgroundColor2: 'var(--backgroundColor2)',
+  paragraphColor: 'var(--paragraphColor)',
+  accentColor1: 'var(--accentColor1)',
 };

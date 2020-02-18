@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { colors } from "../stylesheets/colors";
-import FunkyArrow from "./FunkyArrow";
-import Link from "next/link";
+import React from 'react';
+import styled from 'styled-components';
+import { colors } from '../stylesheets/colors';
+import FunkyArrow from './FunkyArrow';
+import Link from 'next/link';
 
 const Container = styled.div`
   height: 3000px;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React from "react";
+import styled from 'styled-components';
+import React from 'react';
 
 interface FunkyArrowProps {
   color: string;
@@ -13,7 +13,7 @@ const StyledArrow = styled.a`
   padding-left: 40px;
   padding-top: 20px;
   text-decoration: none;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
   font-size: 3em;
   letter-spacing: -0.5em;
   font-weight: bolder;
@@ -30,14 +30,16 @@ const StyledArrow = styled.a`
   }
 `;
 
+// eslint-disable-next-line react/display-name
 const FunkyArrow: React.FC<FunkyArrowProps> = React.forwardRef<
   HTMLAnchorElement,
-  Omit<FunkyArrowProps, "innerRef">
+  Omit<FunkyArrowProps, 'innerRef'>
 >(({ color, href, onClick }, ref) => {
   return (
     <StyledArrow ref={ref} onClick={onClick} href={href} color={color}>
-      {"<------"}
+      {'<------'}
     </StyledArrow>
   );
 });
+
 export default FunkyArrow;

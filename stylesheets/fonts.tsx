@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 /**
  * Colors are defined as CSS variables for use to be able to change them in runtime.

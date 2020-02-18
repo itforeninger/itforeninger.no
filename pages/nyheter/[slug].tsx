@@ -1,13 +1,13 @@
-import React from "react";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-import { parseArticle, ArticleFile } from "../../utils/parseArticle";
-import { NotFoundError } from "../../errors/NotFound";
-import styled from "styled-components";
-import { colors } from "../../stylesheets/colors";
-import { motion } from "framer-motion";
-import FunkyArrow from "../../components/FunkyArrow";
-import Link from "next/link";
+import { parseArticle, ArticleFile } from '../../utils/parseArticle';
+import { NotFoundError } from '../../errors/NotFound';
+import styled from 'styled-components';
+import { colors } from '../../stylesheets/colors';
+import { motion } from 'framer-motion';
+import FunkyArrow from '../../components/FunkyArrow';
+import Link from 'next/link';
 
 interface Props {
   article: ArticleFile;
@@ -35,16 +35,16 @@ const TopLeft = styled.div`
 const BlogTemplate = ({ article }: Props) => {
   return (
     <motion.div
-      initial={{ x: "100vw", opacity: 0 }}
+      initial={{ x: '100vw', opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{
-        x: "100vw",
-        opacity: 0
+        x: '100vw',
+        opacity: 0,
       }}
       transition={{
-        type: "tween",
-        ease: "anticipate",
-        duration: 0.5
+        type: 'tween',
+        ease: 'anticipate',
+        duration: 0.5,
       }}
     >
       <Article>
@@ -62,14 +62,14 @@ const BlogTemplate = ({ article }: Props) => {
   );
 };
 
-BlogTemplate.getInitialProps = async context => {
+BlogTemplate.getInitialProps = async (context) => {
   const { slug } = context.query;
   const article = await parseArticle(slug);
   if (article === null) {
     throw new NotFoundError(slug);
   }
   return {
-    article
+    article,
   };
 };
 

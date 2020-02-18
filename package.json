@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "tsc --noEmit && prettier --write './**/*.{ts,tsx}'",
+    "format-check": "tsc --noEmit && prettier --check './**/*.{ts,tsx}'",
+    "lint": "tsc --noEmit && eslint './**/*.{ts,tsx}' --fix",
+    "lint-check": "tsc --noEmit && eslint './**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@types/react": "^16.9.19",
@@ -23,6 +27,13 @@
   },
   "devDependencies": {
     "@types/node": "^13.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "prettier": "^1.19.1",
     "typescript": "^3.7.5"
   }
 }
