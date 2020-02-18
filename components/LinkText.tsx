@@ -1,13 +1,15 @@
 import styled, { css } from 'styled-components';
 
-interface LinkProps {
+interface LinkTextProps {
   large?: boolean;
+  color: string;
 }
 
-const Link = styled.a<LinkProps>`
+const LinkText = styled.a<LinkTextProps>`
   text-decoration: underline;
   color: ${(props) => props.color};
   transition: filter 0.5s;
+  cursor: pointer;
 
   ${(props) =>
       props.large &&
@@ -19,4 +21,4 @@ const Link = styled.a<LinkProps>`
   }
 `;
 
-export default Link;
+export default LinkText;

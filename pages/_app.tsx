@@ -15,6 +15,11 @@ const CustomApp = (appProps: Props): JSX.Element => {
       <Head>
         <title>Forente IT-Foreninger</title>
       </Head>
+      <link
+        href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap"
+        rel="stylesheet"
+      />
+
       <ColorStyleSheet />
       <FontStyleSheet />
       <AnimatePresence exitBeforeEnter>

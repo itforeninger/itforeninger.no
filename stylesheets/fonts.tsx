@@ -6,8 +6,6 @@ import { createGlobalStyle } from 'styled-components';
  */
 
 export const FontStyleSheet = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
-
 
   body {
     /* Fonts */
