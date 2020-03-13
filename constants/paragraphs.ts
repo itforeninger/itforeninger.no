@@ -18,3 +18,10 @@ export const JOIN_FIF = {
   `,
   contact: CONTACT_EMAIL,
 };
+
+export const GOTO_NEWS = {
+  header: 'LES OM SAKENE VI JOBBER MED',
+  content: `
+    Utover arbeidet vårt for å styrke studentforeningene, jobber vi også med spesifikke saker.
+  `,
+};

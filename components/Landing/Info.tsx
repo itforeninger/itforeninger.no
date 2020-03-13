@@ -7,7 +7,9 @@ import { colors } from '../../stylesheets/colors';
 import Link from 'next/link';
 
 const Grid = styled.div`
-  margin: 40vh 0;
+  margin-top: 40vh;
+  margin-bottom: 30vh;
+  min-width: 350px;
 `;
 
 export const Info = () => {

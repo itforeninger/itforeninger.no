@@ -10,7 +10,6 @@ const RowWrapper = styled.div<RowWrapperProps>`
   display: flex;
   flex-direction: column;
   grid-column: ${(props) => props.start + '/' + (props.end + 1)};
-  padding: 1em;
 
   ${(props) =>
     props.backgroundColor &&

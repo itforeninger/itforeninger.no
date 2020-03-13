@@ -7,8 +7,7 @@ import { colors } from '../../stylesheets/colors';
 
 const Content = styled.div`
   margin: 40vh 0 0;
-  width: 540px;
-  max-width: 100vw;
+  min-width: 400px;
 `;
 
 export const LandingMain = () => {

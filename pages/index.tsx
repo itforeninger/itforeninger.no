@@ -4,12 +4,9 @@ import { AboutMembers } from '../components/AboutMembers';
 import { motion } from 'framer-motion';
 import RowWrapper from '../components/RowWrapper';
 import { colors } from '../stylesheets/colors';
-import Header from '../components/Header';
-import Paragraph from '../components/Paragraph';
-import { ABOUT_FIF, JOIN_FIF } from '../constants/paragraphs';
-import Link from 'next/link';
 import { LandingMain } from '../components/Landing/LandingMain';
 import { Info } from '../components/Landing/Info';
+import { NewsLink } from '../components/Landing/NewsLink';
 
 const Main = styled.main`
   display: grid;
@@ -44,6 +41,9 @@ const Home = () => {
           backgroundColor={colors.backgroundColor2}
         >
           <AboutMembers />
+        </RowWrapper>
+        <RowWrapper start={3} end={9}>
+          <NewsLink />
         </RowWrapper>
       </Main>
     </motion.div>
