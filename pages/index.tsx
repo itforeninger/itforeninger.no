@@ -16,15 +16,12 @@ const Main = styled.main`
 const Home = () => {
   return (
     <motion.div
-      initial={{ x: '100vw', opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{
-        x: '100vw',
         opacity: 0,
       }}
       transition={{
-        type: 'tween',
-        ease: 'anticipate',
         duration: 0.5,
       }}
     >
