@@ -19,13 +19,16 @@ const BigLinkText = styled(LinkText)`
 
 const HorizontalStack = styled.div`
   display: flex;
-  margin-left: ${100 / 12 + 'vw'};
+  margin-left: 100 / 12 + 'vw'};
+  max-width: 600px;
   flex-direction: row;
+  justify-content: flex-start;
   align-content: center;
 `;
 
 const RotatedImage = styled.img`
   transform: rotate(-90deg);
+  margin-left: 10px;
   cursor: pointer;
 `;
 

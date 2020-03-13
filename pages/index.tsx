@@ -39,7 +39,7 @@ const Home = () => {
         >
           <AboutMembers />
         </RowWrapper>
-        <RowWrapper start={3} end={9}>
+        <RowWrapper start={3} end={7}>
           <NewsLink />
         </RowWrapper>
       </Main>
