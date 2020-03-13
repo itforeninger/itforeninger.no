@@ -66,6 +66,24 @@ export const MEMBERS: Member[] = [
     location: 'Gjøvik',
     instituation: 'NTNU',
   },
+  {
+    name: 'Enigma',
+    link: 'https://www.facebook.com/pg/HIOF.Enigma/',
+    location: 'Remmen, Halden',
+    instituation: 'HIOF',
+  },
+  {
+    name: 'dagen@ifi',
+    link: 'https://dagenatifi.no/',
+    location: 'Oslo',
+    instituation: 'UiO',
+  },
+  {
+    name: 'ISI',
+    link: 'http://www.isi-uis.no/nb/',
+    location: 'Stavanger',
+    instituation: 'UiS',
+  },
 ];
 
 export const CONTACT_EMAIL = 'kontakt@itforeninger.no';

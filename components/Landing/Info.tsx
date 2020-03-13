@@ -7,7 +7,7 @@ import { colors } from '../../stylesheets/colors';
 import Link from 'next/link';
 
 const Grid = styled.div`
-  margin: 100px 0;
+  margin: 40vh 0;
 `;
 
 export const Info = () => {
