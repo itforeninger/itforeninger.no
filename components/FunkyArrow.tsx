@@ -10,9 +10,8 @@ interface FunkyArrowProps {
 const StyledArrow = styled.a`
   display: block;
   min-width: 1.1em;
-  padding-left: 40px;
-  padding-top: 20px;
   text-decoration: none;
+  padding: 20px;
   color: ${(props) => props.color};
   font-size: 3em;
   letter-spacing: -0.5em;
@@ -25,8 +24,12 @@ const StyledArrow = styled.a`
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
-  :hover {
-    letter-spacing: 0.2em;
+  @media (min-width: 1023px) {
+    padding-left: 40px;
+    padding-top: 20px;
+    :hover {
+      letter-spacing: 0.2em;
+    }
   }
 `;
 

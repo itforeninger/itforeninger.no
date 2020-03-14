@@ -22,8 +22,12 @@ const Article = styled.article`
   flex-direction: column;
   max-width: 40em;
   padding-top: 10em;
-  margin-left: auto;
-  margin-right: auto;
+  @media (min-width: 1023px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  margin-left: 5%;
+  margin-right: 5%;
 `;
 
 const TopLeft = styled.div`

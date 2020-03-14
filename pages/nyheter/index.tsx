@@ -20,7 +20,11 @@ const Container = styled.div`
 const ArticleList = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 5em;
+  @media (min-width: 1023px) {
+    margin-left: 5em;
+  }
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 10em;
 `;
 

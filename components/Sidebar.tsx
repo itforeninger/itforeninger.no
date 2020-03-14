@@ -7,7 +7,10 @@ import Link from 'next/link';
 const Container = styled.div`
   height: 3000px;
   position: relative;
-  width: 25em;
+  @media (min-width: 1023px) {
+    width: 25em;
+  }
+  width: auto;
 `;
 
 const StickyBar = styled.div`
@@ -19,13 +22,19 @@ const StickyBar = styled.div`
 `;
 
 const FixedText = styled.div`
-  font-size: 4em;
+  @media (min-width: 1023px) {
+    bottom: 2.5em;
+    left: 0.5em;
+    width: 6em;
+    font-size: 4em;
+  }
+  font-size: 3em;
+  width: 12em;
+  left: 0.4em;
+  bottom: 6em;
   text-transform: uppercase;
   color: white;
   position: absolute;
-  bottom: 2.5em;
-  left: 0.5em;
-  width: 6em;
   transform-origin: 0 50%;
   transform: rotate(-90deg) translate(-50%, 50%);
 `;
