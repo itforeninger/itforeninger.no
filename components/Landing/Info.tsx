@@ -11,6 +11,7 @@ const Grid = styled.div`
   margin-bottom: 40vh;
   min-height: 20vh;
   min-width: 350px;
+  z-index: 1;
 `;
 
 export const Info = () => {

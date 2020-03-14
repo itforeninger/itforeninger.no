@@ -9,17 +9,26 @@ import { Info } from '../components/Landing/Info';
 import { NewsLink } from '../components/Landing/NewsLink';
 
 const Main = styled.main`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  @media (min-width: 1023px) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 5%;
 `;
 
 const VerticalText = styled.div`
+  @media (min-width: 1023px) {
+    opacity: 0.2;
+  }
   position: absolute;
+  z-index: 0;
   font-size: 8em;
   width: 800px;
   color: ${colors.lightBlue};
   line-height: 0.85em;
-  opacity: 0.2;
+  opacity: 0.1;
   left: 0;
   transform-origin: 0 50%;
   padding-right: 90px;
