@@ -15,12 +15,14 @@ const Main = styled.main`
   }
   display: flex;
   flex-flow: row wrap;
-  margin: 0 5%;
+  padding: 0 5%;
 `;
 
 const VerticalText = styled.div`
+  display: none;
   @media (min-width: 1023px) {
     opacity: 0.2;
+    display: block;
   }
   position: absolute;
   z-index: 0;

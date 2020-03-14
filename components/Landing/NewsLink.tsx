@@ -7,10 +7,11 @@ import LinkText from '../LinkText';
 import Link from 'next/link';
 
 const Content = styled.div`
-  margin: 40vh 0;
   @media (min-width: 1023px) {
+    margin: 40vh 0;
     min-width: 400px;
   }
+  margin: 20vh 0;
 `;
 
 const BigLinkText = styled(LinkText)`

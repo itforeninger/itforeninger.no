@@ -7,13 +7,16 @@ import { colors } from '../../stylesheets/colors';
 import Link from 'next/link';
 
 const Grid = styled.div`
-  margin-top: 40vh;
-  margin-bottom: 40vh;
   min-height: 20vh;
   @media (min-width: 1023px) {
     min-width: 350px;
+    margin: 40vh 0;
   }
-  z-index: 1;
+  margin: 20vh 0;
+`;
+
+const StyledLink = styled.a`
+  color: ${colors.lightBlue};
 `;
 
 export const Info = () => {
@@ -22,8 +25,8 @@ export const Info = () => {
       <Header color={colors.pink}>{JOIN_FIF.header}</Header>
       <Paragraph>
         {JOIN_FIF.content},{' '}
-        <Link href={'mailto:' + JOIN_FIF.contact}>
-          <a>{JOIN_FIF.contact}</a>
+        <Link href={'mailto:' + JOIN_FIF.contact} passHref>
+          <StyledLink>{JOIN_FIF.contact}</StyledLink>
         </Link>
       </Paragraph>
     </Grid>

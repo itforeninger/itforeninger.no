@@ -18,6 +18,10 @@ const dateFormatter = new Intl.DateTimeFormat('nb-NO');
 const ArticleWrapper = styled.article`
   max-width: 35em;
   margin-bottom: 3em;
+
+  & p {
+    color: ${colors.paragraphColor};
+  }
 `;
 
 const ArticleSummary: React.FC<ArticleSummaryInterface> = ({

@@ -9,6 +9,7 @@ interface RowWrapperProps {
 const RowWrapper = styled.div<RowWrapperProps>`
   display: flex;
   flex-direction: column;
+  z-index: 1;
   grid-column: ${(props) => props.start + '/' + (props.end + 1)};
 
   ${(props) =>

@@ -6,10 +6,11 @@ import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
 
 const Content = styled.div`
-  margin: 40vh 0 0;
   @media (min-width: 1023px) {
     min-width: 400px;
+    margin: 40vh 0 0;
   }
+  margin-top: 30vh;
 `;
 
 export const LandingMain = () => {

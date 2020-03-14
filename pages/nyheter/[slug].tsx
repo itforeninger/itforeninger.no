@@ -28,6 +28,10 @@ const Article = styled.article`
   }
   margin-left: 5%;
   margin-right: 5%;
+
+  & p {
+    color: ${colors.paragraphColor};
+  }
 `;
 
 const TopLeft = styled.div`
