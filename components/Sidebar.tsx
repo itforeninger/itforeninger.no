@@ -5,7 +5,6 @@ import FunkyArrow from './FunkyArrow';
 import Link from 'next/link';
 
 const Container = styled.div`
-  height: 3000px;
   position: relative;
   @media (min-width: 1023px) {
     width: 25em;
