@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const MemberLink = styled(LinkText)`
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.8em;
 `;
 
 const Section = styled.div`

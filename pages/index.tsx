@@ -31,9 +31,10 @@ const VerticalText = styled.div`
   color: ${colors.lightBlue};
   line-height: 0.85em;
   opacity: 0.1;
-  left: 0;
+  left: 50%;
+  margin-left: -50vw;
   transform-origin: 0 50%;
-  padding-right: 90px;
+  padding-right: 100px;
   padding-bottom: 20px;
   transform: rotate(90deg) translate(-100%, -50%);
   transition-property: margin-top, margin-left;
@@ -41,8 +42,8 @@ const VerticalText = styled.div`
   &:hover {
     color: ${colors.beige};
     opacity: 1;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 20px;
+    margin-left: -49vw;
   }
 `;
 
