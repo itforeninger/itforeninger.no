@@ -8,21 +8,30 @@ import Link from 'next/link';
 
 const Content = styled.div`
   margin: 40vh 0;
-  min-width: 400px;
+  @media (min-width: 1023px) {
+    min-width: 400px;
+  }
 `;
 
 const BigLinkText = styled(LinkText)`
-  font-size: 3em;
-  width: 400px;
+  @media (min-width: 1023px) {
+    font-size: 3em;
+    width: 400px;
+  }
+  font-size: 2em;
+  width: 250px;
   display: block;
   margin-bottom: 30px;
 `;
 
 const HorizontalStack = styled.div`
   display: flex;
-  margin-left: ${100 / 12 + 'vw'};
+  @media (min-width: 1023px) {
+    margin-left: ${100 / 12 + 'vw'};
+    flex-direction: row;
+  }
   max-width: 650px;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-content: center;
   font-size: 1.1em;

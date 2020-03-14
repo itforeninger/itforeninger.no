@@ -7,7 +7,9 @@ import { colors } from '../../stylesheets/colors';
 
 const Content = styled.div`
   margin: 40vh 0 0;
-  min-width: 400px;
+  @media (min-width: 1023px) {
+    min-width: 400px;
+  }
 `;
 
 export const LandingMain = () => {

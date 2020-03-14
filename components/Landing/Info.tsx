@@ -10,7 +10,9 @@ const Grid = styled.div`
   margin-top: 40vh;
   margin-bottom: 40vh;
   min-height: 20vh;
-  min-width: 350px;
+  @media (min-width: 1023px) {
+    min-width: 350px;
+  }
   z-index: 1;
 `;
 
