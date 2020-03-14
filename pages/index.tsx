@@ -12,10 +12,12 @@ const Main = styled.main`
   @media (min-width: 1023px) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    padding: 0;
   }
   display: flex;
   flex-flow: row wrap;
   padding: 0 5%;
+  overflow: hidden;
 `;
 
 const VerticalText = styled.div`

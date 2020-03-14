@@ -5,6 +5,7 @@ import { ColorStyleSheet } from '../stylesheets/colors';
 import { FontStyleSheet } from '../stylesheets/fonts';
 import { AnimatePresence } from 'framer-motion';
 import { LogoContainer } from '../components/Logo/LogoContainer';
+import Footer from '../components/Footer';
 
 type Props = AppProps;
 
@@ -26,6 +27,7 @@ const CustomApp = (appProps: Props): JSX.Element => {
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
       <LogoContainer />
+      <Footer />
     </>
   );
 };
