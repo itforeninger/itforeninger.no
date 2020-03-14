@@ -26,6 +26,7 @@ const Article = styled.article`
     margin-left: auto;
     margin-right: auto;
   }
+  padding-bottom: 10em;
   margin-left: 5%;
   margin-right: 5%;
 

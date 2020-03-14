@@ -25,7 +25,8 @@ const ArticleList = styled.div`
   }
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 10em;
+  padding-top: 10em;
+  padding-bottom: 10em;
 `;
 
 const Index = ({ articles }: Props) => {
