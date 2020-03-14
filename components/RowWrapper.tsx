@@ -10,7 +10,9 @@ const RowWrapper = styled.div<RowWrapperProps>`
   display: flex;
   flex-direction: column;
   z-index: 1;
+  width: 100%;
   grid-column: ${(props) => props.start + '/' + (props.end + 1)};
+  position: relative;
 
   ${(props) =>
     props.backgroundColor &&
@@ -18,9 +20,10 @@ const RowWrapper = styled.div<RowWrapperProps>`
   &:before {
     z-index: -1;
     content: '';
-    width: 100%;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
     height: 100%;
-    left: 0;
     background:` +
       props.backgroundColor +
       `;
