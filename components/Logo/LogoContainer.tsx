@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   right: 0;
   height: 100px;
   margin: 30px 40px;
+  z-index: 4;
 `;
 
 const LogoImage = styled.img`
