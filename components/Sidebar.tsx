@@ -26,15 +26,7 @@ const FixedText = styled.div`
   bottom: 2.5em;
   left: 0.5em;
   width: 6em;
-  -webkit-transform-origin: 0 50%;
-  -moz-transform-origin: 0 50%;
-  -ms-transform-origin: 0 50%;
-  -o-transform-origin: 0 50%;
   transform-origin: 0 50%;
-  -webkit-transform: rotate(-90deg) translate(-50%, 50%);
-  -moz-transform: rotate(-90deg) translate(-50%, 50%);
-  -ms-transform: rotate(-90deg) translate(-50%, 50%);
-  -o-transform: rotate(-90deg) translate(-50%, 50%);
   transform: rotate(-90deg) translate(-50%, 50%);
 `;
 

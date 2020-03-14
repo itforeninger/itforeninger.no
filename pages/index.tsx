@@ -13,6 +13,28 @@ const Main = styled.main`
   grid-template-columns: repeat(12, 1fr);
 `;
 
+const VerticalText = styled.div`
+  position: absolute;
+  font-size: 8em;
+  width: 800px;
+  color: ${colors.lightBlue};
+  line-height: 0.85em;
+  opacity: 0.2;
+  left: 0;
+  transform-origin: 0 50%;
+  padding-right: 90px;
+  padding-bottom: 20px;
+  transform: rotate(90deg) translate(-100%, -50%);
+  transition-property: margin-top, margin-left;
+  transition-duration: 0.2s;
+  &:hover {
+    color: ${colors.beige};
+    opacity: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+`;
+
 const Home = () => {
   return (
     <motion.div
@@ -37,6 +59,7 @@ const Home = () => {
           end={11}
           backgroundColor={colors.backgroundColor2}
         >
+          <VerticalText>Forente IT Foreninger</VerticalText>
           <AboutMembers />
         </RowWrapper>
         <RowWrapper start={3} end={7}>

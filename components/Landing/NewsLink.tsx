@@ -12,18 +12,20 @@ const Content = styled.div`
 `;
 
 const BigLinkText = styled(LinkText)`
-  font-size: 2.5em;
-  width: 350px;
+  font-size: 3em;
+  width: 400px;
   display: block;
+  margin-bottom: 30px;
 `;
 
 const HorizontalStack = styled.div`
   display: flex;
-  margin-left: 100 / 12 + 'vw'};
-  max-width: 600px;
+  margin-left: ${100 / 12 + 'vw'};
+  max-width: 650px;
   flex-direction: row;
   justify-content: flex-start;
   align-content: center;
+  font-size: 1.1em;
 `;
 
 const RotatedImage = styled.img`
