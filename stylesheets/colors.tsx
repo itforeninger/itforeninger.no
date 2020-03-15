@@ -10,6 +10,7 @@ export const ColorStyleSheet = createGlobalStyle`
     /* Colors */
     --darkGreen: #246C5E;
     --lightGray: #E7E7F0;
+    --gray: #4D4D4D;
     --beige: #FFF4EE;
     --pink: #D7A1AC;
     --orange: #FB7E4C;
@@ -39,6 +40,7 @@ export const ColorStyleSheet = createGlobalStyle`
 
 /* TypeScript color definitions */
 export const colors = {
+  gray: 'var(--gray)',
   darkGreen: 'var(--darkGreen)',
   lightGray: 'var(--lightGray)',
   beige: 'var(--beige)',

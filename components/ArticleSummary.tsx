@@ -33,7 +33,7 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
   return (
     <ArticleWrapper>
       <Link href="/nyheter/[slug]" as={`/nyheter/${slug}`}>
-        <LinkText large color={colors.pink}>
+        <LinkText large color={colors.dullGreen}>
           {title}
         </LinkText>
       </Link>

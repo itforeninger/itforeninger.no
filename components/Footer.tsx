@@ -6,7 +6,9 @@ import LinkText from './LinkText';
 
 const Container = styled.div`
   box-sizing: border-box;
-
+  @media (prefers-color-scheme: dark) {
+    background: ${colors.darkGray};
+  }
   background: ${colors.lightGray};
   display: flex;
   flex-direction: row;
@@ -25,11 +27,13 @@ const Footer = () => {
   return (
     <Container>
       <Link href="mailto:koordinator@itforeninger.no" passHref>
-        <LinkText color={colors.darkGray}>koordinator@itforeninger.no</LinkText>
+        <LinkText color={colors.paragraphColor}>
+          koordinator@itforeninger.no
+        </LinkText>
       </Link>
       <VerticalStack>
-        <Link href="https://github.com/itforeninger">
-          <LinkText color={colors.darkGray}>Github</LinkText>
+        <Link href="https://github.com/itforeninger" passHref>
+          <LinkText color={colors.paragraphColor}>Github</LinkText>
         </Link>
       </VerticalStack>
     </Container>

@@ -17,10 +17,19 @@ const Section = styled.div`
   box-sizing: border-box;
 `;
 
+const CustomHeader = styled(Header)`
+  color: ${(props) => props.color};
+  @media (prefers-color-scheme: dark) {
+    color: ${colors.paragraphColor};
+  }
+`;
+
 export const AboutMembers = () => {
   return (
     <Section>
-      <Header color={colors.lightBlue}>Studentforeningene i FIF</Header>
+      <CustomHeader color={colors.lightBlue}>
+        Studentforeningene i FIF
+      </CustomHeader>
       {MEMBERS.sort((member1, member2) =>
         member1.name.toLowerCase() > member2.name.toLowerCase() ? 1 : -1
       ).map((member) => (

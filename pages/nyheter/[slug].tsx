@@ -8,14 +8,11 @@ import { colors } from '../../stylesheets/colors';
 import { motion } from 'framer-motion';
 import FunkyArrow from '../../components/FunkyArrow';
 import Link from 'next/link';
+import Header from '../../components/Header';
 
 interface Props {
   article: ArticleFile;
 }
-
-const Header = styled.h1`
-  color: ${colors.darkGreen};
-`;
 
 const Article = styled.article`
   display: flex;
@@ -54,7 +51,7 @@ const BlogTemplate = ({ article }: Props) => {
       }}
     >
       <Article>
-        <Header>{article.data.title}</Header>
+        <Header color={colors.dullGreen}>{article.data.title}</Header>
         <div>
           <ReactMarkdown source={article.content} />
         </div>
