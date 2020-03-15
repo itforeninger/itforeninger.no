@@ -58,7 +58,7 @@ const BlogTemplate = ({ article }: Props) => {
       </Article>
       <TopLeft>
         <Link href="/nyheter" passHref>
-          <FunkyArrow color={colors.lightBlue} />
+          <FunkyArrow color={colors.accentColor2} />
         </Link>
       </TopLeft>
     </motion.div>

@@ -35,7 +35,7 @@ const FixedText = styled.div`
   left: 0.4em;
   bottom: 6em;
   text-transform: uppercase;
-  color: white;
+  color: ${colors.beige};
   position: absolute;
   transform-origin: 0 50%;
   transform: rotate(-90deg) translate(-50%, 50%);
@@ -46,7 +46,7 @@ const Sidebar = () => {
     <Container>
       <StickyBar>
         <Link href="/" passHref>
-          <FunkyArrow color={colors.white} />
+          <FunkyArrow color={colors.beige} />
         </Link>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>

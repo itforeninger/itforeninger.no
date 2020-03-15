@@ -27,6 +27,7 @@ export const ColorStyleSheet = createGlobalStyle`
     --backgroundColor2: var(--beige);
     --paragraphColor: var(--black);
     --accentColor1: var(--orange);
+    --accentColor2: var(--darkGreen);
 
     /* Dark mode overrides */
     @media (prefers-color-scheme: dark) {
@@ -34,6 +35,7 @@ export const ColorStyleSheet = createGlobalStyle`
       --backgroundColor2: var(--darkGray);
       --paragraphColor: var(--beige);
       --accentColor1: var(--dullGreen);
+      --accentColor2: var(--beige);
     }
   }
 `;
@@ -57,4 +59,5 @@ export const colors = {
   backgroundColor2: 'var(--backgroundColor2)',
   paragraphColor: 'var(--paragraphColor)',
   accentColor1: 'var(--accentColor1)',
+  accentColor2: 'var(--accentColor2)',
 };
