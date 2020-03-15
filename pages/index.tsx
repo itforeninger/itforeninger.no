@@ -50,6 +50,9 @@ const VerticalText = styled.div`
 `;
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0 }}
