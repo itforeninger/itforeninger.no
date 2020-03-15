@@ -8,7 +8,8 @@ interface FunkyArrowProps {
 }
 
 const StyledArrow = styled.a`
-  display: block;
+  display: inline-block;
+  margin-right: auto;
   min-width: 1.1em;
   text-decoration: none;
   padding: 20px;
@@ -18,11 +19,6 @@ const StyledArrow = styled.a`
   font-weight: bolder;
   cursor: pointer;
   transition: letter-spacing 1s ease;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
   @media (min-width: 1023px) {
     padding-left: 40px;

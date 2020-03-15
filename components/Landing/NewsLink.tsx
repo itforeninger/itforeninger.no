@@ -42,6 +42,7 @@ const RotatedImage = styled.img`
   transform: rotate(-90deg);
   margin-left: 10px;
   cursor: pointer;
+  user-select: none;
 `;
 
 export const NewsLink = () => {
