@@ -48,12 +48,12 @@ const RotatedImage = styled.img`
 export const NewsLink = () => {
   return (
     <Content>
-      <Link href="/nyheter">
+      <Link scroll={false} href="/nyheter">
         <BigLinkText color={colors.lightBlue}>{GOTO_NEWS.header}</BigLinkText>
       </Link>
       <HorizontalStack>
         <Paragraph>{GOTO_NEWS.content}</Paragraph>
-        <Link href="/nyheter">
+        <Link scroll={false} href="/nyheter">
           <RotatedImage src="Pil.svg" alt="arrow" />
         </Link>
       </HorizontalStack>

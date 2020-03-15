@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Sidebar from '../../components/Sidebar';
 import styled from 'styled-components';
 import ArticleSummary from '../../components/ArticleSummary';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface Props {
   articles: ArticleDocument[];
@@ -30,13 +30,20 @@ const ArticleList = styled.div`
 `;
 
 const Index = ({ articles }: Props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{
+        opacity: 0,
+      }}
       transition={{
         duration: 0.5,
+        ease: [0.48, 0.15, 0.25, 0.96],
       }}
     >
       <Container>

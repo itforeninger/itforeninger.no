@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { parseArticle, ArticleFile } from '../../utils/parseArticle';
@@ -39,6 +39,10 @@ const TopLeft = styled.div`
 `;
 
 const BlogTemplate = ({ article }: Props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -48,6 +52,7 @@ const BlogTemplate = ({ article }: Props) => {
       }}
       transition={{
         duration: 0.5,
+        ease: [0.48, 0.15, 0.25, 0.96],
       }}
     >
       <Article>
@@ -57,7 +62,7 @@ const BlogTemplate = ({ article }: Props) => {
         </div>
       </Article>
       <TopLeft>
-        <Link href="/nyheter" passHref>
+        <Link scroll={false} href="/nyheter" passHref>
           <FunkyArrow color={colors.accentColor2} />
         </Link>
       </TopLeft>

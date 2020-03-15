@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { AboutMembers } from '../components/AboutMembers';
 import { motion } from 'framer-motion';
@@ -59,6 +59,7 @@ const Home = () => {
       }}
       transition={{
         duration: 0.5,
+        ease: [0.48, 0.15, 0.25, 0.96],
       }}
     >
       <Main>

@@ -45,7 +45,7 @@ const Sidebar = () => {
   return (
     <Container>
       <StickyBar>
-        <Link href="/" passHref>
+        <Link scroll={false} href="/" passHref>
           <FunkyArrow color={colors.beige} />
         </Link>
         <FixedText>Sakene vi jobber med</FixedText>

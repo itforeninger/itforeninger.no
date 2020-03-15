@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -12,14 +13,15 @@ const Wrapper = styled.div`
 
 const LogoImage = styled.img`
   height: 100%;
+  cursor: pointer;
 `;
 
 export const LogoContainer = () => {
   return (
     <Wrapper>
-      <a href="/">
+      <Link scroll={false} href="/">
         <LogoImage src="/LogoGrønnFyll.svg" alt="FIF logo" />
-      </a>
+      </Link>
     </Wrapper>
   );
 };
