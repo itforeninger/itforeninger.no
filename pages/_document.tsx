@@ -44,7 +44,7 @@ const CustomDocument = (_: DocumentProps): JSX.Element => {
   return (
     <Html>
       <Head>
-        <link rel="icon" type="image/png" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/F.png" />
         <meta name="theme-color" content="#0D5474" />
         <meta name="description" content="Forente IT-foreninger" />
         <meta

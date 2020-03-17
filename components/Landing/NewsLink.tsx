@@ -38,11 +38,8 @@ const HorizontalStack = styled.div`
   font-size: 1.1em;
 `;
 
-const RotatedImage = styled.img`
-  transform: rotate(-90deg);
-  margin-left: 10px;
+const ImageLink = styled.img`
   cursor: pointer;
-  user-select: none;
 `;
 
 export const NewsLink = () => {
@@ -54,7 +51,7 @@ export const NewsLink = () => {
       <HorizontalStack>
         <Paragraph>{GOTO_NEWS.content}</Paragraph>
         <Link scroll={false} href="/nyheter">
-          <RotatedImage src="Pil.svg" alt="arrow" />
+          <ImageLink src="LysBlåPilHoyre.svg" alt="arrow" />
         </Link>
       </HorizontalStack>
     </Content>
