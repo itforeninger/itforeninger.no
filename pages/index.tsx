@@ -7,6 +7,7 @@ import { colors } from '../stylesheets/colors';
 import { LandingMain } from '../components/Landing/LandingMain';
 import { Info } from '../components/Landing/Info';
 import { NewsLink } from '../components/Landing/NewsLink';
+import { Contact } from '../components/Landing/Contact';
 
 const Main = styled.main`
   @media (min-width: 1023px) {
@@ -82,6 +83,9 @@ const Home = () => {
         </RowWrapper>
         <RowWrapper start={3} end={7}>
           <NewsLink />
+        </RowWrapper>
+        <RowWrapper start={3} end={7}>
+          <Contact />
         </RowWrapper>
       </Main>
     </motion.div>

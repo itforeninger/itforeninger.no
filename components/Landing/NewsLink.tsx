@@ -11,7 +11,7 @@ const Content = styled.div`
     margin: 40vh 0;
     min-width: 400px;
   }
-  margin: 20vh 0;
+  margin: 10vh 0;
 `;
 
 const BigLinkText = styled(LinkText)`

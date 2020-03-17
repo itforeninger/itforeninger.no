@@ -87,3 +87,7 @@ export const MEMBERS: Member[] = [
 ];
 
 export const CONTACT_EMAIL = 'kontakt@itforeninger.no';
+
+export const COORDINATOR_EMAIL = 'koordinator@itforeninger.no';
+
+export const COORDINATORS = ['Hanna Kongshem', 'Henrik Liodden'];
