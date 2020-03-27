@@ -12,7 +12,7 @@ export interface ArticleFile extends GrayMatterFile<Buffer> {
   };
   content: string;
   excerpt?: string;
-  orig: Buffer;
+  orig: null;
 }
 
 interface ArticleFileMatter {
@@ -35,6 +35,7 @@ export const parseArticle = async (
         ...content.data,
         date: content.data.date.toISOString(),
       },
+      orig: null,
     };
     return article;
   } catch {
