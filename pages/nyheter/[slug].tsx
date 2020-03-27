@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { parseArticle, ArticleFile } from '../../utils/parseArticle';
+import { readArticlesDirectory } from '../../utils/readArticlesDirectory';
 import { NotFoundError } from '../../errors/NotFound';
 import styled from 'styled-components';
 import { colors } from '../../stylesheets/colors';
@@ -62,14 +63,24 @@ const BlogTemplate = ({ article }: Props) => {
   );
 };
 
-BlogTemplate.getInitialProps = async (context) => {
-  const { slug } = context.query;
+export const getStaticProps = async (context) => {
+  const { slug } = context.params;
   const article = await parseArticle(slug);
   if (article === null) {
     throw new NotFoundError(slug);
   }
   return {
-    article,
+    props: {
+      article,
+    },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const articles = await readArticlesDirectory();
+  return {
+    paths: articles.map((article) => ({ params: { slug: article.slug } })),
+    fallback: false,
   };
 };
 

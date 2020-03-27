@@ -15,13 +15,28 @@ export interface ArticleFile extends GrayMatterFile<Buffer> {
   orig: Buffer;
 }
 
+interface ArticleFileMatter {
+  title: string;
+  author: string;
+  date: Date;
+}
+
+type RawArticleFile = Omit<ArticleFile, 'date'> & { data: ArticleFileMatter };
+
 export const parseArticle = async (
   slug: string
 ): Promise<ArticleFile | null> => {
   try {
     const file: ArticleFileImport = await import(`../articles/${slug}.md`);
-    const data = matter(file.default) as ArticleFile;
-    return data;
+    const content = matter(file.default) as RawArticleFile;
+    const article: ArticleFile = {
+      ...content,
+      data: {
+        ...content.data,
+        date: content.data.date.toISOString(),
+      },
+    };
+    return article;
   } catch {
     return null;
   }

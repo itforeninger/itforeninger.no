@@ -15,6 +15,14 @@ export interface ArticleFile extends GrayMatterFile<Buffer> {
   orig: Buffer;
 }
 
+interface ArticleFileMatter {
+  title: string;
+  author: string;
+  date: Date;
+}
+
+type RawArticleFile = Omit<ArticleFile, 'date'> & { data: ArticleFileMatter };
+
 export interface ArticleDocument extends ArticleFile {
   slug: string;
 }
@@ -35,9 +43,16 @@ export const readArticlesDirectory = async (): Promise<ArticleDocument[]> => {
   const data = fileNames.map((fileName, index) => {
     const slug = createSlug(fileName);
     const file = files[index];
-    const content = matter(file.default) as ArticleFile;
-    return {
+    const content = matter(file.default) as RawArticleFile;
+    const article: ArticleFile = {
       ...content,
+      data: {
+        ...content.data,
+        date: content.data.date.toISOString(),
+      },
+    };
+    return {
+      ...article,
       slug,
     };
   });
