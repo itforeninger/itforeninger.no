@@ -8,9 +8,10 @@ import { LandingMain } from '../components/Landing/LandingMain';
 import { Info } from '../components/Landing/Info';
 import { NewsLink } from '../components/Landing/NewsLink';
 import { Contact } from '../components/Landing/Contact';
+import { constants } from '../stylesheets/constants';
 
 const Main = styled.main`
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding: 0;
@@ -23,7 +24,7 @@ const Main = styled.main`
 
 const VerticalText = styled.div`
   display: none;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     opacity: 0.2;
     display: block;
   }

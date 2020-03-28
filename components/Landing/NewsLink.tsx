@@ -5,9 +5,10 @@ import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
 import LinkText from '../LinkText';
 import Link from 'next/link';
+import { constants } from '../../stylesheets/constants';
 
 const Content = styled.div`
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     margin: 40vh 0;
     min-width: 400px;
   }
@@ -15,7 +16,7 @@ const Content = styled.div`
 `;
 
 const BigLinkText = styled(LinkText)`
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     font-size: 3em;
     width: 400px;
   }
@@ -27,7 +28,7 @@ const BigLinkText = styled(LinkText)`
 
 const HorizontalStack = styled.div`
   display: flex;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     margin-left: ${100 / 12 + 'vw'};
     flex-direction: row;
   }

@@ -20,7 +20,6 @@ const CustomApp = (appProps: Props): JSX.Element => {
         href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap"
         rel="stylesheet"
       />
-
       <ColorStyleSheet />
       <FontStyleSheet />
       <AnimatePresence exitBeforeEnter>

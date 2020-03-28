@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+import { constants } from '../stylesheets/constants';
 
 interface FunkyArrowProps {
   color: string;
@@ -20,7 +21,7 @@ const StyledArrow = styled.a`
   cursor: pointer;
   transition: letter-spacing 1s ease;
   user-select: none;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     padding-left: 40px;
     padding-top: 20px;
     :hover {

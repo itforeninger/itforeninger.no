@@ -5,10 +5,11 @@ import Header from '../Header';
 import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
 import Link from 'next/link';
+import { constants } from '../../stylesheets/constants';
 
 const Grid = styled.div`
   min-height: 20vh;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     min-width: 350px;
     margin: 40vh 0;
   }

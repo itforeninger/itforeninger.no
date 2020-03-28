@@ -4,9 +4,10 @@ import { ABOUT_FIF } from '../../constants/paragraphs';
 import Header from '../Header';
 import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
+import { constants } from '../../stylesheets/constants';
 
 const Content = styled.div`
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     min-width: 400px;
     margin: 40vh 0 0;
   }

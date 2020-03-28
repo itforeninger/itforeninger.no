@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import FunkyArrow from '../../components/FunkyArrow';
 import Link from 'next/link';
 import Header from '../../components/Header';
+import { constants } from '../../stylesheets/constants';
 
 interface Props {
   article: ArticleFile;
@@ -19,7 +20,7 @@ const Article = styled.article`
   flex-direction: column;
   max-width: 40em;
   padding-top: 10em;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     margin-left: auto;
     margin-right: auto;
   }

@@ -7,6 +7,7 @@ import Sidebar from '../../components/Sidebar';
 import styled from 'styled-components';
 import ArticleSummary from '../../components/ArticleSummary';
 import React, { useEffect } from 'react';
+import { constants } from '../../stylesheets/constants';
 
 interface Props {
   articles: ArticleDocument[];
@@ -20,7 +21,7 @@ const Container = styled.div`
 const ArticleList = styled.div`
   display: flex;
   flex-direction: column;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     margin-left: 5em;
   }
   margin-left: 5%;

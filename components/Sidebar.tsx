@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import { colors } from '../stylesheets/colors';
 import FunkyArrow from './FunkyArrow';
 import Link from 'next/link';
+import { constants } from '../stylesheets/constants';
 
 const Container = styled.div`
   position: relative;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     width: 25em;
   }
   width: auto;
@@ -21,7 +22,7 @@ const StickyBar = styled.div`
 `;
 
 const FixedText = styled.div`
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     bottom: 2.5em;
     left: 0.5em;
     width: 6em;

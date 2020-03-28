@@ -6,6 +6,7 @@ import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
 import Link from 'next/link';
 import LinkText from '../LinkText';
+import { constants } from '../../stylesheets/constants';
 
 const Container = styled.div`
   background-image: url('BobleKontakt.svg');
@@ -16,7 +17,7 @@ const Container = styled.div`
   height: 300px;
   display: flex;
   flex-direction: column;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     margin: 10vh 0 20vh 0;
     width: 675px;
     height: 500px;
@@ -32,7 +33,7 @@ const Content = styled.div`
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     padding: 80px 0;
   }
 `;
@@ -40,13 +41,13 @@ const Content = styled.div`
 const DarkParagraph = styled(Paragraph)`
   color: ${colors.lightBlack};
   max-width: 10em;
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     font-size: 1.5em;
   }
 `;
 
 const BigHeader = styled(Header)`
-  @media (min-width: 1023px) {
+  @media (min-width: ${constants.minWidth}) {
     font-size: 2.5em;
   }
 `;
