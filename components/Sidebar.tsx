@@ -13,10 +13,7 @@ const Container = styled.div`
 `;
 
 const StickyBar = styled.div`
-  background-color: ${colors.lightBlue};
-  @media (prefers-color-scheme: dark) {
-    background-color: ${colors.gray};
-  }
+  background-color: ${colors.backgroundColor4};
   height: 100vh;
   position: sticky;
   top: 0;

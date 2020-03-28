@@ -6,10 +6,7 @@ import LinkText from './LinkText';
 
 const Container = styled.div`
   box-sizing: border-box;
-  @media (prefers-color-scheme: dark) {
-    background: ${colors.darkGray};
-  }
-  background: ${colors.lightGray};
+  background: ${colors.backgroundColor3};
   display: flex;
   flex-direction: row;
   justify-content: space-between;

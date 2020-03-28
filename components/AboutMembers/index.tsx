@@ -19,15 +19,12 @@ const Section = styled.div`
 
 const CustomHeader = styled(Header)`
   color: ${(props) => props.color};
-  @media (prefers-color-scheme: dark) {
-    color: ${colors.paragraphColor};
-  }
 `;
 
 export const AboutMembers = () => {
   return (
     <Section>
-      <CustomHeader color={colors.lightBlue}>
+      <CustomHeader color={colors.accentColor3}>
         Studentforeningene i FIF
       </CustomHeader>
       {MEMBERS.sort((member1, member2) =>
