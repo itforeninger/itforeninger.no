@@ -22,15 +22,12 @@ const StyledLink = styled.a`
 
 const CustomHeader = styled(Header)`
   color: ${(props) => props.color};
-  @media (prefers-color-scheme: dark) {
-    color: ${colors.paragraphColor};
-  }
 `;
 
 export const Info = () => {
   return (
     <Grid>
-      <CustomHeader color={colors.pink}>{JOIN_FIF.header}</CustomHeader>
+      <CustomHeader color={colors.accentColor5}>{JOIN_FIF.header}</CustomHeader>
       <Paragraph>
         {JOIN_FIF.content},{' '}
         <Link href={'mailto:' + JOIN_FIF.contact} passHref>

@@ -31,6 +31,8 @@ export const ColorStyleSheet = createGlobalStyle`
     --accentColor1: var(--orange);
     --accentColor2: var(--darkGreen);
     --accentColor3: var(--lightBlue);
+    --accentColor4: var(--orange);
+    --accentColor5: var(--pink);
 
     /* Dark mode overrides */
     @media (prefers-color-scheme: dark) {
@@ -42,6 +44,8 @@ export const ColorStyleSheet = createGlobalStyle`
       --accentColor1: var(--dullGreen);
       --accentColor2: var(--beige);
       --accentColor3: var(--beige);
+      --accentColor4: var(--beige);
+      --accentColor5: var(--beige);
     }
   }
 `;
@@ -69,4 +73,6 @@ export const colors = {
   accentColor1: 'var(--accentColor1)',
   accentColor2: 'var(--accentColor2)',
   accentColor3: 'var(--accentColor3)',
+  accentColor4: 'var(--accentColor4)',
+  accentColor5: 'var(--accentColor5)',
 };
