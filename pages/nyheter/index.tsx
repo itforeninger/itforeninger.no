@@ -54,10 +54,12 @@ const Index = ({ articles }: Props) => {
   );
 };
 
-Index.getInitialProps = async () => {
+export const getStaticProps = async () => {
   const articles = await readArticlesDirectory();
   return {
-    articles,
+    props: {
+      articles,
+    },
   };
 };
 
