@@ -17,17 +17,15 @@ const RowWrapper = styled.div<RowWrapperProps>`
   ${(props) =>
     props.backgroundColor &&
     `
-  &:before {
-    z-index: -1;
-    content: '';
-    width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
-    height: 100%;
-    background:` +
-      props.backgroundColor +
-      `;
-    position: absolute;
+    &:before {
+      z-index: -1;
+      content: '';
+      width: 100vw;
+      left: 50%;
+      margin-left: -50vw;
+      height: 100%;
+      background:${props.backgroundColor};
+      position: absolute;
   }`};
 `;
 
