@@ -17,7 +17,11 @@ const dateFormatter = new Intl.DateTimeFormat('nb-NO');
 
 const ArticleWrapper = styled.article`
   max-width: 35em;
-  margin-bottom: 3em;
+  padding-bottom: 3em;
+
+  & p {
+    color: ${colors.paragraphColor};
+  }
 `;
 
 const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
@@ -28,8 +32,8 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
 }) => {
   return (
     <ArticleWrapper>
-      <Link href="/nyheter/[slug]" as={`/nyheter/${slug}`}>
-        <LinkText large color={colors.pink}>
+      <Link scroll={false} href="/nyheter/[slug]" as={`/nyheter/${slug}`}>
+        <LinkText large color={colors.dullGreen}>
           {title}
         </LinkText>
       </Link>

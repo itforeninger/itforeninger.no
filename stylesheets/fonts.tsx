@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './colors';
 
 /**
  * Colors are defined as CSS variables for use to be able to change them in runtime.
@@ -11,6 +12,7 @@ export const FontStyleSheet = createGlobalStyle`
     /* Fonts */
     margin: 0;
     font-family: 'Fira Mono', monospace;
+    background: ${colors.backgroundColor};
   }
 
 `;

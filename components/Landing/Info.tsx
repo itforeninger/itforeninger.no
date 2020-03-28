@@ -5,19 +5,33 @@ import Header from '../Header';
 import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
 import Link from 'next/link';
+import { constants } from '../../stylesheets/constants';
 
 const Grid = styled.div`
-  margin: 100px 0;
+  min-height: 20vh;
+  @media (min-width: ${constants.minWidth}) {
+    min-width: 350px;
+    margin: 40vh 0;
+  }
+  margin: 20vh 0;
+`;
+
+const StyledLink = styled.a`
+  color: ${colors.lightBlue};
+`;
+
+const CustomHeader = styled(Header)`
+  color: ${(props) => props.color};
 `;
 
 export const Info = () => {
   return (
     <Grid>
-      <Header color={colors.pink}>{JOIN_FIF.header}</Header>
+      <CustomHeader color={colors.accentColor5}>{JOIN_FIF.header}</CustomHeader>
       <Paragraph>
         {JOIN_FIF.content},{' '}
-        <Link href={'mailto:' + JOIN_FIF.contact}>
-          <a>{JOIN_FIF.contact}</a>
+        <Link href={'mailto:' + JOIN_FIF.contact} passHref>
+          <StyledLink>{JOIN_FIF.contact}</StyledLink>
         </Link>
       </Paragraph>
     </Grid>

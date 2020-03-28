@@ -4,25 +4,27 @@ import { ABOUT_FIF } from '../../constants/paragraphs';
 import Header from '../Header';
 import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
-
-const Wrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-`;
+import { constants } from '../../stylesheets/constants';
 
 const Content = styled.div`
-  margin: 60vh 0 0;
-  width: 540px;
-  max-width: 100vw;
+  @media (min-width: ${constants.minWidth}) {
+    min-width: 400px;
+    margin: 40vh 0 0;
+  }
+  margin-top: 30vh;
+`;
+
+const CustomHeader = styled(Header)`
+  color: ${(props) => props.color};
 `;
 
 export const LandingMain = () => {
   return (
-    <Wrapper>
-      <Content>
-        <Header color={colors.orange}>{ABOUT_FIF.header}</Header>
-        <Paragraph>{ABOUT_FIF.content}</Paragraph>
-      </Content>
-    </Wrapper>
+    <Content>
+      <CustomHeader color={colors.accentColor4}>
+        {ABOUT_FIF.header}
+      </CustomHeader>
+      <Paragraph>{ABOUT_FIF.content}</Paragraph>
+    </Content>
   );
 };

@@ -3,15 +3,18 @@ import styled from 'styled-components';
 import { colors } from '../stylesheets/colors';
 import FunkyArrow from './FunkyArrow';
 import Link from 'next/link';
+import { constants } from '../stylesheets/constants';
 
 const Container = styled.div`
-  height: 3000px;
   position: relative;
-  width: 25em;
+  @media (min-width: ${constants.minWidth}) {
+    width: 25em;
+  }
+  width: auto;
 `;
 
 const StickyBar = styled.div`
-  background-color: ${colors.lightBlue};
+  background-color: ${colors.backgroundColor4};
   height: 100vh;
   position: sticky;
   top: 0;
@@ -19,22 +22,21 @@ const StickyBar = styled.div`
 `;
 
 const FixedText = styled.div`
-  font-size: 4em;
+  @media (min-width: ${constants.minWidth}) {
+    bottom: 2.5em;
+    left: 0.5em;
+    width: 6em;
+    font-size: 4em;
+  }
+  user-select: none;
+  font-size: 3em;
+  width: 12em;
+  left: 0.4em;
+  bottom: 6em;
   text-transform: uppercase;
-  color: white;
+  color: ${colors.beige};
   position: absolute;
-  bottom: 2.5em;
-  left: 0.5em;
-  width: 6em;
-  -webkit-transform-origin: 0 50%;
-  -moz-transform-origin: 0 50%;
-  -ms-transform-origin: 0 50%;
-  -o-transform-origin: 0 50%;
   transform-origin: 0 50%;
-  -webkit-transform: rotate(-90deg) translate(-50%, 50%);
-  -moz-transform: rotate(-90deg) translate(-50%, 50%);
-  -ms-transform: rotate(-90deg) translate(-50%, 50%);
-  -o-transform: rotate(-90deg) translate(-50%, 50%);
   transform: rotate(-90deg) translate(-50%, 50%);
 `;
 
@@ -42,8 +44,8 @@ const Sidebar = () => {
   return (
     <Container>
       <StickyBar>
-        <Link href="/" passHref>
-          <FunkyArrow color={colors.white} />
+        <Link scroll={false} href="/" passHref>
+          <FunkyArrow color={colors.beige} />
         </Link>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>

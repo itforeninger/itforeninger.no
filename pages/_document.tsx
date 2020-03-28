@@ -44,7 +44,7 @@ const CustomDocument = (_: DocumentProps): JSX.Element => {
   return (
     <Html>
       <Head>
-        <link rel="icon" type="image/png" href="/gallery-logo-256.png" />
+        <link rel="icon" type="image/png" href="/F.png" />
         <meta name="theme-color" content="#0D5474" />
         <meta name="description" content="Forente IT-foreninger" />
         <meta
@@ -54,7 +54,6 @@ const CustomDocument = (_: DocumentProps): JSX.Element => {
         <meta name="author" content="Forente IT-foreninger" />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://itforeninger.no" />
-        <link rel="manifest" href="/manifest.json" />
       </Head>
       <body>
         <Main />

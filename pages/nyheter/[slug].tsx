@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import { parseArticle, ArticleFile } from '../../utils/parseArticle';
@@ -9,22 +9,30 @@ import { colors } from '../../stylesheets/colors';
 import { motion } from 'framer-motion';
 import FunkyArrow from '../../components/FunkyArrow';
 import Link from 'next/link';
+import Header from '../../components/Header';
+import { constants } from '../../stylesheets/constants';
 
 interface Props {
   article: ArticleFile;
 }
 
-const Header = styled.h1`
-  color: ${colors.darkGreen};
-`;
-
 const Article = styled.article`
   display: flex;
+  min-height: 60vh;
   flex-direction: column;
   max-width: 40em;
   padding-top: 10em;
-  margin-left: auto;
-  margin-right: auto;
+  @media (min-width: ${constants.minWidth}) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  padding-bottom: 10em;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  & p {
+    color: ${colors.paragraphColor};
+  }
 `;
 
 const TopLeft = styled.div`
@@ -34,29 +42,31 @@ const TopLeft = styled.div`
 `;
 
 const BlogTemplate = ({ article }: Props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
-      initial={{ x: '100vw', opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{
-        x: '100vw',
         opacity: 0,
       }}
       transition={{
-        type: 'tween',
-        ease: 'anticipate',
         duration: 0.5,
+        ease: [0.48, 0.15, 0.25, 0.96],
       }}
     >
       <Article>
-        <Header>{article.data.title}</Header>
+        <Header color={colors.dullGreen}>{article.data.title}</Header>
         <div>
           <ReactMarkdown source={article.content} />
         </div>
       </Article>
       <TopLeft>
-        <Link href="/nyheter" passHref>
-          <FunkyArrow color={colors.lightBlue} />
+        <Link scroll={false} href="/nyheter" passHref>
+          <FunkyArrow color={colors.accentColor2} />
         </Link>
       </TopLeft>
     </motion.div>

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '../stylesheets/colors';
 
 interface RowWrapperProps {
   start: number;
@@ -10,11 +9,24 @@ interface RowWrapperProps {
 const RowWrapper = styled.div<RowWrapperProps>`
   display: flex;
   flex-direction: column;
+  z-index: 1;
+  width: 100%;
   grid-column: ${(props) => props.start + '/' + (props.end + 1)};
-  padding: 1em;
+  position: relative;
 
-  background: ${(props) =>
-    props.backgroundColor ? colors[props.backgroundColor] : 'none'};
+  ${(props) =>
+    props.backgroundColor &&
+    `
+    &:before {
+      z-index: -1;
+      content: '';
+      width: 100vw;
+      left: 50%;
+      margin-left: -50vw;
+      height: 100%;
+      background:${props.backgroundColor};
+      position: absolute;
+  }`};
 `;
 
 export default RowWrapper;
