@@ -28,6 +28,7 @@ const VerticalText = styled.div`
     opacity: 0.2;
     display: block;
   }
+  user-select: none;
   position: absolute;
   z-index: 0;
   font-size: 8em;

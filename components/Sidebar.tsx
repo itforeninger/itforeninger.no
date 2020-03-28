@@ -28,6 +28,7 @@ const FixedText = styled.div`
     width: 6em;
     font-size: 4em;
   }
+  user-select: none;
   font-size: 3em;
   width: 12em;
   left: 0.4em;

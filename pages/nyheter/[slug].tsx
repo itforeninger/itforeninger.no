@@ -17,6 +17,7 @@ interface Props {
 
 const Article = styled.article`
   display: flex;
+  min-height: 60vh;
   flex-direction: column;
   max-width: 40em;
   padding-top: 10em;
