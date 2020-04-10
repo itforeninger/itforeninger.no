@@ -9,6 +9,7 @@ export interface ArticleFile extends GrayMatterFile<Buffer> {
     title: string;
     author: string;
     date: string;
+    summary: string;
   };
   content: string;
   excerpt?: string;
@@ -19,6 +20,7 @@ interface ArticleFileMatter {
   title: string;
   author: string;
   date: Date;
+  summary: string;
 }
 
 type RawArticleFile = Omit<ArticleFile, 'date'> & { data: ArticleFileMatter };
