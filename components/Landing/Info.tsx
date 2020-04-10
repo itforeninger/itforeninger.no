@@ -33,6 +33,7 @@ export const Info = () => {
         <Link href={'mailto:' + JOIN_FIF.contact} passHref>
           <StyledLink>{JOIN_FIF.contact}</StyledLink>
         </Link>
+        {'.'}
       </Paragraph>
     </Grid>
   );
