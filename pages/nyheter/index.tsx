@@ -8,6 +8,8 @@ import styled from 'styled-components';
 import ArticleSummary from '../../components/ArticleSummary';
 import React, { useEffect } from 'react';
 import { constants } from '../../stylesheets/constants';
+import { CANONICAL_URL } from '../../constants/about';
+import Head from 'next/head';
 
 interface Props {
   articles: ArticleDocument[];
@@ -36,32 +38,47 @@ const Index = ({ articles }: Props) => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{
-        opacity: 0,
-      }}
-      transition={{
-        duration: 0.5,
-        ease: [0.48, 0.15, 0.25, 0.96],
-      }}
-    >
-      <Container>
-        <Sidebar />
-        <ArticleList>
-          {articles.map((article) => (
-            <ArticleSummary
-              key={article.slug}
-              date={article.data.date}
-              slug={article.slug}
-              title={article.data.title}
-              content={article.data.summary}
-            ></ArticleSummary>
-          ))}
-        </ArticleList>
-      </Container>
-    </motion.div>
+    <>
+      <Head>
+        <meta property="og:url" content={`${CANONICAL_URL}/nyheter`} />
+        <meta property="og:title" content="Forente IT-Foreninger | Nyheter" />
+        <meta property="og:description" content="Sakene FIF jobber med" />
+        <meta property="og:type" content="article" />
+        {articles.map((article) => (
+          <meta
+            key={article.data.author}
+            property="og:article:author"
+            content={article.data.author}
+          />
+        ))}
+      </Head>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.48, 0.15, 0.25, 0.96],
+        }}
+      >
+        <Container>
+          <Sidebar />
+          <ArticleList>
+            {articles.map((article) => (
+              <ArticleSummary
+                key={article.slug}
+                date={article.data.publishedDate}
+                slug={article.slug}
+                title={article.data.title}
+                content={article.data.summary}
+              ></ArticleSummary>
+            ))}
+          </ArticleList>
+        </Container>
+      </motion.div>
+    </>
   );
 };
 

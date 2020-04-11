@@ -9,6 +9,9 @@ import { Info } from '../components/Landing/Info';
 import { NewsLink } from '../components/Landing/NewsLink';
 import { Contact } from '../components/Landing/Contact';
 import { constants } from '../stylesheets/constants';
+import Head from 'next/head';
+import { CANONICAL_URL } from '../constants/about';
+import { ABOUT_FIF } from '../constants/paragraphs';
 
 const Main = styled.main`
   @media (min-width: ${constants.minWidth}) {
@@ -57,40 +60,47 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{
-        opacity: 0,
-      }}
-      transition={{
-        duration: 0.5,
-        ease: [0.48, 0.15, 0.25, 0.96],
-      }}
-    >
-      <Main>
-        <RowWrapper start={3} end={6}>
-          <LandingMain />
-        </RowWrapper>
-        <RowWrapper start={5} end={8}>
-          <Info />
-        </RowWrapper>
-        <RowWrapper
-          start={2}
-          end={11}
-          backgroundColor={colors.backgroundColor2}
-        >
-          <VerticalText>Forente IT Foreninger</VerticalText>
-          <AboutMembers />
-        </RowWrapper>
-        <RowWrapper start={3} end={7}>
-          <NewsLink />
-        </RowWrapper>
-        <RowWrapper start={3} end={7}>
-          <Contact />
-        </RowWrapper>
-      </Main>
-    </motion.div>
+    <>
+      <Head>
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:title" content="Forente IT-Foreninger" />
+        <meta property="og:description" content={ABOUT_FIF.content} />
+      </Head>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.48, 0.15, 0.25, 0.96],
+        }}
+      >
+        <Main>
+          <RowWrapper start={3} end={6}>
+            <LandingMain />
+          </RowWrapper>
+          <RowWrapper start={5} end={8}>
+            <Info />
+          </RowWrapper>
+          <RowWrapper
+            start={2}
+            end={11}
+            backgroundColor={colors.backgroundColor2}
+          >
+            <VerticalText>Forente IT Foreninger</VerticalText>
+            <AboutMembers />
+          </RowWrapper>
+          <RowWrapper start={3} end={7}>
+            <NewsLink />
+          </RowWrapper>
+          <RowWrapper start={3} end={7}>
+            <Contact />
+          </RowWrapper>
+        </Main>
+      </motion.div>
+    </>
   );
 };
 
