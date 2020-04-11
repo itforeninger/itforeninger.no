@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../stylesheets/colors';
-import FunkyArrow from './FunkyArrow';
 import Link from 'next/link';
 import { constants } from '../stylesheets/constants';
 
@@ -40,12 +39,18 @@ const FixedText = styled.div`
   transform: rotate(-90deg) translate(-50%, 50%);
 `;
 
+const ImageLink = styled.img`
+  cursor: pointer;
+  padding: 40px;
+  width: 3em;
+`;
+
 const Sidebar = () => {
   return (
     <Container>
       <StickyBar>
-        <Link scroll={false} href="/" passHref>
-          <FunkyArrow color={colors.beige} />
+        <Link scroll={false} href="/">
+          <ImageLink src="LysPilVenstre.svg" alt="arrow" />
         </Link>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>

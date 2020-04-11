@@ -41,6 +41,12 @@ const TopLeft = styled.div`
   left: 0;
 `;
 
+const ImageLink = styled.img`
+  cursor: pointer;
+  padding: 40px;
+  width: 3em;
+`;
+
 const BlogTemplate = ({ article }: Props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -65,8 +71,8 @@ const BlogTemplate = ({ article }: Props) => {
         </div>
       </Article>
       <TopLeft>
-        <Link scroll={false} href="/nyheter" passHref>
-          <FunkyArrow color={colors.accentColor2} />
+        <Link scroll={false} href="/nyheter">
+          <ImageLink src="/LysPilVenstre.svg" alt="arrow" />
         </Link>
       </TopLeft>
     </motion.div>

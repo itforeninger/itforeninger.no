@@ -56,7 +56,7 @@ const Index = ({ articles }: Props) => {
               date={article.data.date}
               slug={article.slug}
               title={article.data.title}
-              content={article.content}
+              content={article.data.summary}
             ></ArticleSummary>
           ))}
         </ArticleList>
