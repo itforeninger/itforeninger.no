@@ -6,6 +6,7 @@ import { FontStyleSheet } from '../stylesheets/fonts';
 import { AnimatePresence } from 'framer-motion';
 import { LogoContainer } from '../components/Logo/LogoContainer';
 import Footer from '../components/Footer';
+import { MetaImage } from '../components/Meta/MetaImage';
 
 type Props = AppProps;
 
@@ -15,6 +16,7 @@ const CustomApp = (appProps: Props): JSX.Element => {
     <>
       <Head>
         <title>Forente IT-Foreninger</title>
+        <MetaImage />
       </Head>
       <link
         href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap"

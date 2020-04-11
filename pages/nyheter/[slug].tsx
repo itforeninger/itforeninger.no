@@ -11,9 +11,12 @@ import FunkyArrow from '../../components/FunkyArrow';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import { constants } from '../../stylesheets/constants';
+import Head from 'next/head';
+import { CANONICAL_URL } from '../../constants/about';
 
 interface Props {
   article: ArticleFile;
+  slug: string;
 }
 
 const Article = styled.article`
@@ -47,35 +50,52 @@ const ImageLink = styled.img`
   width: 3em;
 `;
 
-const BlogTemplate = ({ article }: Props) => {
+const BlogTemplate = ({ article, slug }: Props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{
-        opacity: 0,
-      }}
-      transition={{
-        duration: 0.5,
-        ease: [0.48, 0.15, 0.25, 0.96],
-      }}
-    >
-      <Article>
-        <Header color={colors.dullGreen}>{article.data.title}</Header>
-        <div>
-          <ReactMarkdown source={article.content} />
-        </div>
-      </Article>
-      <TopLeft>
-        <Link scroll={false} href="/nyheter">
-          <ImageLink src="/LysPilVenstre.svg" alt="arrow" />
-        </Link>
-      </TopLeft>
-    </motion.div>
+    <>
+      <Head>
+        <meta property="og:url" content={`${CANONICAL_URL}/nyheter/${slug}`} />
+        <meta property="og:title" content={article.data.title} />
+        <meta property="og:description" content={article.data.summary} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:article:published_time"
+          content={article.data.publishedDate}
+        />
+        <meta
+          property="og:article:modified_time"
+          content={article.data.modifiedDate}
+        />
+        <meta property="og:article:author" content={article.data.author} />
+      </Head>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.48, 0.15, 0.25, 0.96],
+        }}
+      >
+        <Article>
+          <Header color={colors.dullGreen}>{article.data.title}</Header>
+          <div>
+            <ReactMarkdown source={article.content} />
+          </div>
+        </Article>
+        <TopLeft>
+          <Link scroll={false} href="/nyheter">
+            <ImageLink src="/LysPilVenstre.svg" alt="arrow" />
+          </Link>
+        </TopLeft>
+      </motion.div>
+    </>
   );
 };
 
@@ -88,6 +108,7 @@ export const getStaticProps = async (context) => {
   return {
     props: {
       article,
+      slug,
     },
   };
 };

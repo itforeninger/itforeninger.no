@@ -8,6 +8,12 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 import React, { ComponentProps } from 'react';
+import {
+  CANONICAL_URL,
+  DEFAULT_AUTHOR,
+  PAGE_KEYWORDS,
+  PAGE_DESCRIPTION,
+} from '../constants/about';
 
 const getInitialProps = async (
   ctx: DocumentContext
@@ -42,18 +48,15 @@ type DocumentProps = ComponentProps<typeof Document>;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CustomDocument = (_: DocumentProps): JSX.Element => {
   return (
-    <Html>
+    <Html lang="nb-NO">
       <Head>
         <link rel="icon" type="image/png" href="/F.png" />
         <meta name="theme-color" content="#0D5474" />
-        <meta name="description" content="Forente IT-foreninger" />
-        <meta
-          name="keywords"
-          content="FIF, Forente IT-foreninger, itforeninger, student, it-student, studentforening"
-        />
-        <meta name="author" content="Forente IT-foreninger" />
+        <meta name="description" content={PAGE_DESCRIPTION} />
+        <meta name="keywords" content={PAGE_KEYWORDS.join(', ')} />
+        <meta name="author" content={DEFAULT_AUTHOR} />
         <meta name="robots" content="index,follow" />
-        <link rel="canonical" href="https://itforeninger.no" />
+        <link rel="canonical" href={CANONICAL_URL} />
       </Head>
       <body>
         <Main />

@@ -8,7 +8,8 @@ export interface ArticleFile extends GrayMatterFile<Buffer> {
   data: {
     title: string;
     author: string;
-    date: string;
+    publishedDate: string;
+    modifiedDate: string;
     summary: string;
   };
   content: string;
@@ -19,11 +20,15 @@ export interface ArticleFile extends GrayMatterFile<Buffer> {
 interface ArticleFileMatter {
   title: string;
   author: string;
-  date: Date;
+  publishedDate: Date;
+  modifiedDate: Date;
   summary: string;
 }
 
-type RawArticleFile = Omit<ArticleFile, 'date'> & { data: ArticleFileMatter };
+type RawArticleFile = Omit<
+  Omit<ArticleFile, 'publishedDate'>,
+  'modifiedDate'
+> & { data: ArticleFileMatter };
 
 export interface ArticleDocument extends ArticleFile {
   slug: string;
@@ -50,7 +55,8 @@ export const readArticlesDirectory = async (): Promise<ArticleDocument[]> => {
       ...content,
       data: {
         ...content.data,
-        date: content.data.date.toISOString(),
+        publishedDate: content.data.publishedDate.toISOString(),
+        modifiedDate: content.data.modifiedDate.toISOString(),
       },
       orig: null,
     };

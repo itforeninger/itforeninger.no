@@ -93,3 +93,22 @@ export const COORDINATOR_EMAIL = 'koordinator@itforeninger.no';
 export const COORDINATORS = ['Hanna Kongshem', 'Henrik Liodden'];
 
 export const GITHUB_URL = 'https://github.com/itforeninger';
+
+export const CANONICAL_URL = 'https://itforeninger.no';
+
+export const CANONICAL_LOGO = `${CANONICAL_URL}/LogoGrønnFyll.svg`;
+
+export const PAGE_DESCRIPTION = `
+Forente IT-foreninger
+`;
+
+export const PAGE_KEYWORDS = [
+  'FIF',
+  'Forente IT-foreninger',
+  'itforeninger',
+  'student',
+  'it-student',
+  'studentforening',
+];
+
+export const DEFAULT_AUTHOR = 'Forente IT-foreninger';

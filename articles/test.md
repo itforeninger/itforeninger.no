@@ -1,7 +1,8 @@
 ---
 title: Testartikkel
 author: Henrik Liodden
-date: 2020-03-28
+publishedDate: 2020-03-28
+modifiedDate: 2020-04-11
 summary: A summary of the article
 ---
 
