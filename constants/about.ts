@@ -97,7 +97,7 @@ export const GITHUB_URL = 'https://github.com/itforeninger';
 export const CANONICAL_URL =
   'https://itforeninger-no-git-feat-graph-meta.oleast.now.sh';
 
-export const CANONICAL_LOGO = `${CANONICAL_URL}/LogoGrønnFyll.png`;
+export const CANONICAL_LOGO = `${CANONICAL_URL}/LogoGrønnFyllHvitBakgrunn.png`;
 
 export const PAGE_DESCRIPTION = `
 Forente IT-foreninger
