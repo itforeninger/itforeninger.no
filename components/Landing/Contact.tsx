@@ -32,8 +32,13 @@ const Container = styled.div`
   }
   @media (max-width: 440px) {
     font-size: 0.8em;
-    justify-content: start;
-    padding-top: 35px;
+    max-width: 350px;
+    min-height: 255px;
+  }
+  @media (max-width: 350px) {
+    font-size: 0.75em;
+    max-width: 280px;
+    min-height: 210px;
   }
 `;
 
