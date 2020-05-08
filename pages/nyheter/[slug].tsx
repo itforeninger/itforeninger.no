@@ -7,7 +7,6 @@ import { NotFoundError } from '../../errors/NotFound';
 import styled from 'styled-components';
 import { colors } from '../../stylesheets/colors';
 import { motion } from 'framer-motion';
-import FunkyArrow from '../../components/FunkyArrow';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import { constants } from '../../stylesheets/constants';
