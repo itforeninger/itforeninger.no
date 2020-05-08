@@ -15,15 +15,25 @@ const Container = styled.div`
   background-image: url('BobleKontakt.svg');
   background-size: 100%;
   background-repeat: no-repeat;
-  margin: 10vh auto;
-  width: 400px;
-  height: 300px;
+  margin: 10vh 0;
+  max-width: 400px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  font-size: 0.9em;
   @media (min-width: ${constants.minWidth}) {
+    font-size: 1em;
     margin: 10vh 0 20vh 0;
+    max-width: none;
+    min-height: none;
     width: 675px;
-    height: 500px;
+    height: 495px;
+  }
+  @media (max-width: 440px) {
+    font-size: 0.8em;
+    justify-content: start;
+    padding-top: 35px;
   }
 `;
 
@@ -31,7 +41,6 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 30px 0;
   height: 100%;
   box-sizing: border-box;
   margin-left: auto;
@@ -56,7 +65,7 @@ const BigHeader = styled(Header)`
 `;
 
 const LinkPadding = styled.div`
-  padding: 10px 0;
+  padding: 5px 0;
 `;
 
 export const Contact = () => {
