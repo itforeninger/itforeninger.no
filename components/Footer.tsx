@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import { colors } from '../stylesheets/colors';
 import Link from 'next/link';
 import LinkText from './LinkText';
-import { COORDINATOR_EMAIL, GITHUB_URL } from '../constants/about';
+import {
+  COORDINATOR_EMAIL,
+  GITHUB_URL,
+  TEMPORARY_COORDINATOR_EMAILS,
+} from '../constants/about';
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -21,12 +25,32 @@ const VerticalStack = styled.div`
   flex-direction: column;
 `;
 
+const LinkPadding = styled.div`
+  padding: 10px 0;
+`;
+
 const Footer = () => {
   return (
     <Container>
-      <Link href={`mailto:${COORDINATOR_EMAIL}`} passHref>
+      <div>
+        <LinkPadding>
+          <Link href={'mailto:' + TEMPORARY_COORDINATOR_EMAILS[0]} passHref>
+            <LinkText color={colors.paragraphColor}>
+              {TEMPORARY_COORDINATOR_EMAILS[0]}
+            </LinkText>
+          </Link>
+        </LinkPadding>
+        <LinkPadding>
+          <Link href={'mailto:' + TEMPORARY_COORDINATOR_EMAILS[1]} passHref>
+            <LinkText color={colors.paragraphColor}>
+              {TEMPORARY_COORDINATOR_EMAILS[1]}
+            </LinkText>
+          </Link>
+        </LinkPadding>
+      </div>
+      {/* <Link href={`mailto:${COORDINATOR_EMAIL}`} passHref>
         <LinkText color={colors.paragraphColor}>{COORDINATOR_EMAIL}</LinkText>
-      </Link>
+      </Link> */}
       <VerticalStack>
         <Link href={GITHUB_URL} passHref>
           <LinkText color={colors.paragraphColor}>Github</LinkText>
