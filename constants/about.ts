@@ -53,6 +53,7 @@ export const MEMBERS: Member[] = [
     link: 'https://www.facebook.com/EpsilonAalesund/',
     location: 'Ålesund',
     instituation: 'NTNU',
+    memberCount: 340,
   },
   {
     name: 'Echo',
