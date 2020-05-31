@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  COORDINATORS,
-  TEMPORARY_COORDINATOR_EMAILS,
-} from '../../constants/about';
+import { COORDINATORS, COORDINATOR_EMAIL } from '../../constants/about';
 import Header from '../Header';
 import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
@@ -69,32 +66,15 @@ const BigHeader = styled(Header)`
   }
 `;
 
-const LinkPadding = styled.div`
-  padding: 5px 0;
-`;
-
 export const Contact = () => {
   return (
     <Container>
       <Content>
         <BigHeader color={colors.lightBlack}>Kontakt</BigHeader>
         <DarkParagraph>{COORDINATORS.join(' & ')}</DarkParagraph>
-        <div>
-          <LinkPadding>
-            <Link href={'mailto:' + TEMPORARY_COORDINATOR_EMAILS[0]} passHref>
-              <LinkText color={colors.lightBlack}>
-                {TEMPORARY_COORDINATOR_EMAILS[0]}
-              </LinkText>
-            </Link>
-          </LinkPadding>
-          <LinkPadding>
-            <Link href={'mailto:' + TEMPORARY_COORDINATOR_EMAILS[1]} passHref>
-              <LinkText color={colors.lightBlack}>
-                {TEMPORARY_COORDINATOR_EMAILS[1]}
-              </LinkText>
-            </Link>
-          </LinkPadding>
-        </div>
+        <Link href={'mailto:' + COORDINATOR_EMAIL} passHref>
+          <LinkText color={colors.lightBlack}>{COORDINATOR_EMAIL}</LinkText>
+        </Link>
       </Content>
     </Container>
   );

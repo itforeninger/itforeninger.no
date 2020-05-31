@@ -53,6 +53,7 @@ export const MEMBERS: Member[] = [
     link: 'https://www.facebook.com/EpsilonAalesund/',
     location: 'Ålesund',
     instituation: 'NTNU',
+    memberCount: 340,
   },
   {
     name: 'Echo',
@@ -105,14 +106,7 @@ export const MEMBERS: Member[] = [
 
 export const CONTACT_EMAIL = 'kontakt@itforeninger.no';
 
-export const TEMPORARY_CONTACT_EMAIL = 'fif@online.ntnu.no';
-
 export const COORDINATOR_EMAIL = 'koordinator@itforeninger.no';
-
-export const TEMPORARY_COORDINATOR_EMAILS = [
-  'henrik.liodden@online.ntnu.no',
-  'hanna.kongshem@gmail.com',
-];
 
 export const COORDINATORS = ['Hanna Kongshem', 'Henrik Liodden'];
 
