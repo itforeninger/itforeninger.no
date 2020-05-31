@@ -1,4 +1,4 @@
-import { TEMPORARY_CONTACT_EMAIL } from './about';
+import { CONTACT_EMAIL } from './about';
 
 export const ABOUT_FIF = {
   header: 'FIF er',
@@ -15,7 +15,7 @@ export const JOIN_FIF = {
   content: `
     Er din studentforening interessert i å bli med i FIF? Vi vil gjerne høre
     fra deg! Ta kontakt med oss`,
-  contact: TEMPORARY_CONTACT_EMAIL,
+  contact: CONTACT_EMAIL,
 };
 
 export const GOTO_NEWS = {
