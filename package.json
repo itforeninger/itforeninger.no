@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
+    "deploy": "yarn build && yarn export",
     "format": "tsc --noEmit && prettier --write './**/*.{ts,tsx}'",
     "format-check": "tsc --noEmit && prettier --check './**/*.{ts,tsx}'",
     "lint": "tsc --noEmit && eslint './**/*.{ts,tsx}' --fix",
