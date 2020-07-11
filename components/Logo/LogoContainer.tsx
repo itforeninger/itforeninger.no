@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import AnimatedLogo from '../AnimatedLogo';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -20,7 +21,8 @@ export const LogoContainer = () => {
   return (
     <Wrapper>
       <Link scroll={false} href="/">
-        <LogoImage src="/LogoGrønnFyll.svg" alt="FIF logo" />
+        <AnimatedLogo />
+        {/* <LogoImage src="/LogoGrønnFyll.svg" alt="FIF logo" /> */}
       </Link>
     </Wrapper>
   );
