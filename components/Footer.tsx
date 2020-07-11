@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from '../stylesheets/colors';
 import Link from 'next/link';
 import LinkText from './LinkText';
-import { COORDINATOR_EMAIL, GITHUB_URL } from '../constants/about';
+import { GITHUB_URL, COORDINATOR_EMAIL } from '../constants/about';
 
 const Container = styled.div`
   box-sizing: border-box;

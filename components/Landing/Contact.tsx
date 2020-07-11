@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { COORDINATOR_EMAIL, COORDINATORS } from '../../constants/about';
+import { COORDINATORS, COORDINATOR_EMAIL } from '../../constants/about';
 import Header from '../Header';
 import Paragraph from '../Paragraph';
 import { colors } from '../../stylesheets/colors';
