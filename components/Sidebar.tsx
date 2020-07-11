@@ -21,6 +21,18 @@ const StickyBar = styled.div`
 `;
 
 const FixedText = styled.div`
+  @media (max-height: 660px) {
+    font-size: 2.5em;
+    width: 12em;
+    left: 0.4em;
+    bottom: 6em;
+  }
+  @media (max-height: 580px) {
+    font-size: 2em;
+    width: 12em;
+    left: 0.65em;
+    bottom: 6em;
+  }
   @media (min-width: ${constants.minWidth}) {
     bottom: 2.5em;
     left: 0.5em;
