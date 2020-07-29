@@ -31,9 +31,23 @@ const Article = styled.article`
   padding-bottom: 10em;
   margin-left: 5%;
   margin-right: 5%;
+`;
 
+const ArticleContent = styled.div`
   & p {
     color: ${colors.paragraphColor};
+  }
+  & h1 {
+    color: ${colors.accentColor4};
+  }
+  & h2 {
+    color: ${colors.accentColor4};
+  }
+  & h3 {
+    color: ${colors.accentColor4};
+  }
+  & h4 {
+    color: ${colors.accentColor4};
   }
 `;
 
@@ -84,9 +98,9 @@ const BlogTemplate = ({ article, slug }: Props) => {
       >
         <Article>
           <Header color={colors.dullGreen}>{article.data.title}</Header>
-          <div>
+          <ArticleContent>
             <ReactMarkdown source={article.content} />
-          </div>
+          </ArticleContent>
         </Article>
         <TopLeft>
           <Link scroll={false} href="/nyheter">
