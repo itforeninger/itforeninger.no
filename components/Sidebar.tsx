@@ -9,7 +9,7 @@ const Container = styled.div`
   @media (min-width: ${constants.minWidth}) {
     width: 25em;
   }
-  width: auto;
+  width: 5em;
 `;
 
 const StickyBar = styled.div`
@@ -21,6 +21,18 @@ const StickyBar = styled.div`
 `;
 
 const FixedText = styled.div`
+  @media (max-height: 660px) {
+    font-size: 2.5em;
+    width: 12em;
+    left: 0.4em;
+    bottom: 6em;
+  }
+  @media (max-height: 580px) {
+    font-size: 2em;
+    width: 12em;
+    left: 0.65em;
+    bottom: 6em;
+  }
   @media (min-width: ${constants.minWidth}) {
     bottom: 2.5em;
     left: 0.5em;
@@ -30,7 +42,7 @@ const FixedText = styled.div`
   user-select: none;
   font-size: 3em;
   width: 12em;
-  left: 0.4em;
+  left: 0.2em;
   bottom: 6em;
   text-transform: uppercase;
   color: ${colors.beige};
@@ -41,7 +53,7 @@ const FixedText = styled.div`
 
 const ImageLink = styled.img`
   cursor: pointer;
-  padding: 40px;
+  padding: 30px 15px;
   width: 3em;
 `;
 

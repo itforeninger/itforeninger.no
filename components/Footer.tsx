@@ -9,11 +9,15 @@ const Container = styled.div`
   box-sizing: border-box;
   background: ${colors.backgroundColor3};
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 40px ${100 / 12 + 'vw'};
   min-height: 25vh;
+  @media (min-width: 440px) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 `;
 
 const VerticalStack = styled.div`
