@@ -14,6 +14,7 @@ import {
   PAGE_KEYWORDS,
   PAGE_DESCRIPTION,
 } from '../constants/about';
+import { GA_TRACKING_ID } from '../constants/analytics';
 
 const getInitialProps = async (
   ctx: DocumentContext
@@ -57,6 +58,25 @@ const CustomDocument = (_: DocumentProps): JSX.Element => {
         <meta name="author" content={DEFAULT_AUTHOR} />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href={CANONICAL_URL} />
+        <Head>
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+        </Head>
       </Head>
       <body>
         <Main />
