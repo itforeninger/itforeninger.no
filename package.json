@@ -14,6 +14,7 @@
     "lint-check": "tsc --noEmit && eslint './**/*.{ts,tsx}'"
   },
   "dependencies": {
+    "@types/gtag.js": "^0.0.3",
     "@types/react": "^16.9.26",
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^5.0.1",
