@@ -54,7 +54,7 @@ const Content = styled.div`
 
 const DarkParagraph = styled(Paragraph)`
   color: ${colors.lightBlack};
-  max-width: 10em;
+  max-width: 11em;
   @media (min-width: ${constants.minWidth}) {
     font-size: 1.5em;
   }
