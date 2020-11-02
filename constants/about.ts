@@ -108,7 +108,7 @@ export const CONTACT_EMAIL = 'kontakt@itforeninger.no';
 
 export const COORDINATOR_EMAIL = 'koordinator@itforeninger.no';
 
-export const COORDINATORS = ['Hanna Kongshem', 'Henrik Liodden'];
+export const COORDINATORS = ['Cornelia Vassbotn', 'Sindre Langaard'];
 
 export const GITHUB_URL = 'https://github.com/itforeninger';
 
