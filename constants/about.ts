@@ -49,14 +49,14 @@ export const MEMBERS: Member[] = [
     memberCount: 450,
   },
   {
-    name: 'Epsilon',
-    link: 'https://www.facebook.com/EpsilonAalesund/',
+    name: 'Syntax',
+    link: 'https://www.facebook.com/SyntaxAalesund',
     location: 'Ålesund',
     instituation: 'NTNU',
     memberCount: 340,
   },
   {
-    name: 'Echo',
+    name: 'echo',
     link: 'https://echo.uib.no',
     location: 'Bergen',
     instituation: 'UiB',
@@ -108,7 +108,11 @@ export const CONTACT_EMAIL = 'kontakt@itforeninger.no';
 
 export const COORDINATOR_EMAIL = 'koordinator@itforeninger.no';
 
-export const COORDINATORS = ['Cornelia Vassbotn', 'Sindre Langaard'];
+export const COORDINATORS = [
+  'Cornelia Vassbotn',
+  'Sindre Langaard',
+  'Andreas Bakseter',
+];
 
 export const GITHUB_URL = 'https://github.com/itforeninger';
 
