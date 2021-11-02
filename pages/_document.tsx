@@ -87,6 +87,5 @@ const CustomDocument = (_: DocumentProps): JSX.Element => {
 };
 
 CustomDocument.getInitialProps = getInitialProps;
-CustomDocument.renderDocument = Document.renderDocument;
 
 export default CustomDocument;

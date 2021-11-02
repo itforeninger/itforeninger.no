@@ -1,6 +1,5 @@
 import { GA_TRACKING_ID } from '../constants/analytics';
 
-/* eslint-disable @typescript-eslint/camelcase */
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageView = (url) => {
   window.gtag('config', GA_TRACKING_ID, {
@@ -16,4 +15,3 @@ export const event = ({ action, category, label, value }) => {
     value: value,
   });
 };
-/* eslint-enable @typescript-eslint/camelcase */

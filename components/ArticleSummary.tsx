@@ -32,7 +32,12 @@ const ArticleSummary: React.FC<ArticleSummaryInterface> = ({
 }) => {
   return (
     <ArticleWrapper>
-      <Link scroll={false} href="/nyheter/[slug]" as={`/nyheter/${slug}`}>
+      <Link
+        scroll={false}
+        href="/nyheter/[slug]"
+        as={`/nyheter/${slug}`}
+        passHref
+      >
         <LinkText large color={colors.dullGreen}>
           {title}
         </LinkText>

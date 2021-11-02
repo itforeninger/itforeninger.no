@@ -99,12 +99,14 @@ const BlogTemplate = ({ article, slug }: Props) => {
         <Article>
           <Header color={colors.dullGreen}>{article.data.title}</Header>
           <ArticleContent>
-            <ReactMarkdown source={article.content} />
+            <ReactMarkdown>{article.content}</ReactMarkdown>
           </ArticleContent>
         </Article>
         <TopLeft>
-          <Link scroll={false} href="/nyheter">
-            <ImageLink src="/LysPilVenstre.svg" alt="arrow" />
+          <Link scroll={false} href="/nyheter" passHref>
+            <a>
+              <ImageLink src="/LysPilVenstre.svg" alt="arrow" />
+            </a>
           </Link>
         </TopLeft>
       </motion.div>

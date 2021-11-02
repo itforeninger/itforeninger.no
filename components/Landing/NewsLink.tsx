@@ -46,13 +46,15 @@ const ImageLink = styled.img`
 export const NewsLink = () => {
   return (
     <Content>
-      <Link scroll={false} href="/nyheter">
+      <Link scroll={false} href="/nyheter" passHref>
         <BigLinkText color={colors.lightBlue}>{GOTO_NEWS.header}</BigLinkText>
       </Link>
       <HorizontalStack>
         <Paragraph>{GOTO_NEWS.content}</Paragraph>
-        <Link scroll={false} href="/nyheter">
-          <ImageLink src="LysBlåPilHoyre.svg" alt="arrow" />
+        <Link scroll={false} href="/nyheter" passHref>
+          <a>
+            <ImageLink src="LysBlåPilHoyre.svg" alt="arrow" />
+          </a>
         </Link>
       </HorizontalStack>
     </Content>

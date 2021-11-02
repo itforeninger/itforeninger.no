@@ -12,11 +12,11 @@ const LinkText = styled.a<LinkTextProps>`
   cursor: pointer;
 
   ${(props) =>
-      props.large &&
-      css`
-        font-size: 1.5em;
-      `}
-    :hover {
+    props.large &&
+    css`
+      font-size: 1.5em;
+    `}
+  :hover {
     filter: brightness(80%);
   }
 `;
