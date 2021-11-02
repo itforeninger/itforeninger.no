@@ -61,8 +61,10 @@ const Sidebar = () => {
   return (
     <Container>
       <StickyBar>
-        <Link scroll={false} href="/">
-          <ImageLink src="LysPilVenstre.svg" alt="arrow" />
+        <Link scroll={false} href="/" passHref>
+          <a>
+            <ImageLink src="LysPilVenstre.svg" alt="arrow" />
+          </a>
         </Link>
         <FixedText>Sakene vi jobber med</FixedText>
       </StickyBar>

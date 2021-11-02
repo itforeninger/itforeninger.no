@@ -19,8 +19,10 @@ const LogoImage = styled.img`
 export const LogoContainer = () => {
   return (
     <Wrapper>
-      <Link scroll={false} href="/">
-        <LogoImage src="/LogoGrønnFyll.svg" alt="FIF logo" />
+      <Link scroll={false} href="/" passHref>
+        <a>
+          <LogoImage src="/LogoGrønnFyll.svg" alt="FIF logo" />
+        </a>
       </Link>
     </Wrapper>
   );
