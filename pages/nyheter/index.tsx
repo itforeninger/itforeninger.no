@@ -66,15 +66,21 @@ const Index = ({ articles }: Props) => {
         <Container>
           <Sidebar />
           <ArticleList>
-            {articles.map((article) => (
-              <ArticleSummary
-                key={article.slug}
-                date={article.data.publishedDate}
-                slug={article.slug}
-                title={article.data.title}
-                content={article.data.summary}
-              ></ArticleSummary>
-            ))}
+            {articles
+              .sort((a, b) => {
+                const dateA = new Date(a.data.publishedDate).getMilliseconds();
+                const dateB = new Date(b.data.publishedDate).getMilliseconds();
+                return dateB - dateA;
+              })
+              .map((article) => (
+                <ArticleSummary
+                  key={article.slug}
+                  date={article.data.publishedDate}
+                  slug={article.slug}
+                  title={article.data.title}
+                  content={article.data.summary}
+                ></ArticleSummary>
+              ))}
           </ArticleList>
         </Container>
       </motion.div>
