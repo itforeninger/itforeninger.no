@@ -68,8 +68,8 @@ const Index = ({ articles }: Props) => {
           <ArticleList>
             {articles
               .sort((a, b) => {
-                const dateA = new Date(a.data.publishedDate).getMilliseconds();
-                const dateB = new Date(b.data.publishedDate).getMilliseconds();
+                const dateA = Date.parse(a.data.publishedDate);
+                const dateB = Date.parse(b.data.publishedDate);
                 return dateB - dateA;
               })
               .map((article) => (
