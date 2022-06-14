@@ -1,6 +1,6 @@
 ---
 title: Semestermøte - V22
-author:  Sindre Langaard & Andreas Bakseter & Cornelia Vassbotn
+author:  Andreas Ulvig & Thomas Hasvold
 publishedDate: 2022-06-14
 modifiedDate: 2022-06-14
 summary: FIF ruller fremmover med høyt engasjement etter pandemien. Vårens møte ble avholdt i Bergen med Echo som verstskap. Erfaringsbanksaken stod i fokus, i tillegg ble det utvekslet rutiner og opplevelser knyttet til bedriftspresentasjoner.
