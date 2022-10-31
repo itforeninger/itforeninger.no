@@ -14,29 +14,33 @@
     "lint-check": "tsc --noEmit && eslint './**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "framer-motion": "^5.0.2",
+    "framer-motion": "^7.6.2",
     "gray-matter": "^4.0.3",
-    "next": "12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-markdown": "^7.1.0",
-    "styled-components": "^5.3.3"
+    "next": "13.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.3",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@types/gtag.js": "^0.0.7",
-    "@types/node": "^16.11.6",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@types/styled-components": "^5.0.1",
-    "@types/webpack-env": "^1.16.3",
-    "@typescript-eslint/eslint-plugin": "^5.3.0",
-    "@typescript-eslint/parser": "^5.3.0",
-    "eslint": "^7.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.26.1",
-    "prettier": "^2.4.1",
+    "@next/eslint-plugin-next": "^13.0.0",
+    "@types/gtag.js": "^0.0.12",
+    "@types/node": "^18.11.8",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/styled-components": "^5.1.26",
+    "@types/webpack-env": "^1.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "^2.7.1",
     "raw-loader": "^4.0.2",
-    "typescript": "^4.4.4"
+    "typescript": "^4.8.4"
+  },
+  "resolutions": {
+    "@types/react": "^18"
   }
 }

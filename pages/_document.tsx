@@ -52,12 +52,16 @@ const CustomDocument = (_: DocumentProps): JSX.Element => {
     <Html lang="nb-NO">
       <Head>
         <link rel="icon" type="image/png" href="/F.png" />
-        <meta name="theme-color" content="#0D5474" />
+        <meta name="theme-color" content="#246C5E" />
         <meta name="description" content={PAGE_DESCRIPTION} />
         <meta name="keywords" content={PAGE_KEYWORDS.join(', ')} />
         <meta name="author" content={DEFAULT_AUTHOR} />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href={CANONICAL_URL} />
+        <link
+          href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap"
+          rel="stylesheet"
+        />
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
