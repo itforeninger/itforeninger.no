@@ -91,7 +91,7 @@ export const MEMBERS: Member[] = [
   },
   {
     name: 'ISI',
-    link: 'http://www.isi-uis.no/nb/',
+    link: 'http://www.isi-uis.no/',
     location: 'Stavanger',
     instituation: 'UiS',
     memberCount: 130,
