@@ -71,7 +71,11 @@ export const Contact = () => {
     <Container>
       <Content>
         <BigHeader color={colors.lightBlack}>Kontakt</BigHeader>
-        <DarkParagraph>{COORDINATORS.join(' ')}</DarkParagraph>
+        <DarkParagraph
+          dangerouslySetInnerHTML={{
+            __html: COORDINATORS.join('<br/> <hr>'),
+          }}
+        />
         <Link href={'mailto:' + COORDINATOR_EMAIL} passHref>
           <LinkText color={colors.lightBlack}>{COORDINATOR_EMAIL}</LinkText>
         </Link>
